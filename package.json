@@ -1,0 +1,43 @@
+{
+  "name": "11ty-porfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx gulp build",
+    "watch": "npx gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camphan12993/11ty-porfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camphan12993/11ty-porfolio/issues"
+  },
+  "homepage": "https://github.com/camphan12993/11ty-porfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.13",
+    "browserify": "^17.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.13.0",
+    "eslint-loader": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "terser": "^5.4.0",
+    "webpack": "^5.5.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}

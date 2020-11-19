@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="site.webmanifest" rel="manifest">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="/assets/css/index.css" rel="stylesheet"/>
+
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ description }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta content="website" property="og:type">
+    <meta property="og:url" content="{{ siteUrl }}">
+    <meta property="og:site_name" content="{{ siteName }}">
+    <meta content="en_US" property="og:locale">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ imgSrc | prepend: siteUrl }}">
+    <meta content="1280" property="og:image:width">
+    <meta content="640" property="og:image:height">
+    <meta property="og:image:alt" content="{{ imgAtl }}">
+
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+    <meta property="twitter:url" content="{{ siteUrl }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ description }}">
+    <meta property="twitter:image" content="{{ imgSrc | prepend: siteUrl }}">
+    <meta property="twitter:image:alt" content="{{ imgAlt }}">
+  </head>
+  <body>
+    <main>
+      <h1>Helloaa</h1>
+      {{ content | safe }}
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
