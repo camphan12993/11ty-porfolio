@@ -1,3 +1,9 @@
+@tailwind base;
+
 h1 {
-  font-size: 20px;
+	color: yellow;
 }
+
+@tailwind components;
+
+@tailwind utilities;
