@@ -8,7 +8,9 @@
     <link href='favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
     <link href='site.webmanifest' rel='manifest'>
     <link href='https://unpkg.com/aos@next/dist/aos.css' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com/css2?family=Nunito&display=swap' rel='stylesheet'>
+    <link href='https://fonts.gstatic.com' rel='preconnect'>
+    <link href='https://fonts.gstatic.com' rel='preconnect'>
+    <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Lato&display=swap' rel='stylesheet'>
     <link href='/assets/css/main.css' rel='stylesheet'/>
 
     <title>{{ title }}
@@ -37,12 +39,135 @@
     <meta property='twitter:image:alt' content="{{ imgAlt }}">
   </head>
   <body>
+    <header>
+      <div class='h-14 px-4 bg-primary flex justify-between items-center fixed w-full z-50'>
+        <nav class='flex min-w-1/3'>
+          <a class='mr-5 text-white' href='#'>Work</a>
+          <a class='mr-5 text-white' href='#'>About</a>
+          <a class='mr-5 text-white' href='#'>Contact</a>
+        </nav>
+        <img alt='' class='w-12 h-auto' src='/assets/imgs/logowhite.png'>
+        <div class='flex min-w-1/3 justify-end'>
+          <a class='ml-3 text-white' href=''>
+            <ion-icon name='logo-facebook'></ion-icon>
+          </a>
+          <a class='ml-3 text-white' href=''>
+            <ion-icon name='logo-github'></ion-icon>
+          </a>
+          <a class='ml-3 text-white' href=''>
+            <ion-icon name='logo-pinterest'></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class=' pt-14 bg-primary h-screen'>
+        <div class='container flex flex-col justify-center items-center h-full'>
+          <h1 class='text-6xl text-white mb-2'>Hi! I'm Cam</h1>
+          <p class='text-white text-2xl'>A Frontend Developer</p>
+        </div>
+      </div>
+    </header>
     <main>
-      <h1>Hellos</h1>
-      {{ content | safe }}
+      <section class='relative bg-secondary py-20 overflow-hidden'>
+        <h2 class='text-white text-6xl font-bold absolute top-6 left-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;'>WORK</h2>
+        <div class='container relative'>
+          <div class='flex mb-4'>
+            <div class='text-white flex-1 text-right pr-6'>June 2016 - April 2017</div>
+            <div class='text-white flex-1 pl-6'>
+              <h3 class='font-bold'>
+                FPT Software
+              </h3>
+              <p>
+                Java Developer
+              </p>
+            </div>
+          </div>
+          <div class='flex mb-4'>
+            <div class='text-white flex-1 text-right pr-6'>April 2017 - April 2020</div>
+            <div class='text-white flex-1 pl-6'>
+              <h3 class='font-bold'>
+                Enouvo IT Solution
+              </h3>
+              <p>
+                Senior Frontend Developer
+              </p>
+              <p>
+                Angular Team Leader
+              </p>
+              <p>
+                Project Manager
+              </p>
+            </div>
+          </div>
+          <div class='flex'>
+            <div class='text-white flex-1 text-right pr-6'>April 2020 - present</div>
+            <div class='text-white flex-1 pl-6'>
+              <h3 class='font-bold'>
+                Freelancer
+              </h3>
+              <p>
+                Website Developer
+              </p>
+              <p>
+                Graphic Design
+              </p>
+            </div>
+          </div>
+
+          <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
+        </div>
+      </section>
+      <section class='relative bg-primary py-20 overflow-hidden'>
+        <h2 class='text-white text-6xl font-bold absolute top-6 right-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;'>PORFOLIOS</h2>
+        <div class='container flex'>
+          <div class='bg-white rounded-2xl w-1/2 p-6 flex flex-col mx-4'>
+            <span class='text-secondary font-bold opacity-60'>Web</span>
+            <h3 class='text-secondary text-2xl font-bold mb-4'>DTI System</h3>
+            <img alt='dti' class='mb-6' src='/assets/imgs/dti.png'>
+            <div>
+              <p class='text-sm italic mb-2'>
+                DTI develops and provides world-leading surveillance, video analytics, and passenger information systems technology and services to the mobile transit industry worldwide.
+              </p>
+              <div class='flex'>
+                <div class='w-1/2'>
+                  <h6 class='font-bold uppercase'>Position</h6>
+                  <p>Project Manager</p>
+                  <p>Web Developer</p>
+                </div>
+                <div class='w-1/2'>
+                  <h6 class='font-bold uppercase'>Techs</h6>
+                  <p>Angular / .Net</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='bg-white rounded-2xl w-1/2 p-6 flex flex-col'>
+            <span class='text-secondary font-bold opacity-60'>Web</span>
+            <h3 class='text-secondary text-2xl font-bold mb-4'>DTI System</h3>
+            <img alt='dti' class='mb-6' src='/assets/imgs/dti.png'>
+            <div>
+              <p class='text-sm italic mb-2'>
+                DTI develops and provides world-leading surveillance, video analytics, and passenger information systems technology and services to the mobile transit industry worldwide.
+              </p>
+              <div class='flex'>
+                <div class='w-1/2'>
+                  <h6 class='font-bold uppercase'>Position</h6>
+                  <p>Project Manager</p>
+                  <p>Web Developer</p>
+                </div>
+                <div class='w-1/2'>
+                  <h6 class='font-bold uppercase'>Techs</h6>
+                  <p>Angular / .Net</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </main>
     <script src='https://unpkg.com/aos@next/dist/aos.js'></script>
     <script src='https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js' type='module'></script>
     <script src='/assets/js/main.js'></script>
+    <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons.js'></script>
   </body>
 </html>

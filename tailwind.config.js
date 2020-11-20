@@ -44,6 +44,9 @@ module.exports = {
 				secondary: 'var(--color-secondary)',
 			},
 		},
+		fontFamily: {
+			title: ['Lato', 'sans-serif'],
+		},
 		container: {
 			center: true,
 		},

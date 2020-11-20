@@ -1,11 +1,12 @@
 module.exports = function (config) {
-  return {
-    dir: {
-      input: "src",
-    },
-    passthroughFileCopy: true,
-    templateFormats: ["html", "liquid", "md"],
-    htmlTemplateEngine: "liquid",
-    markdownTemplateEngine: "liquid",
-  };
+	config.addPassthroughCopy('src/assets/imgs');
+	return {
+		dir: {
+			input: 'src',
+		},
+		passthroughFileCopy: true,
+		templateFormats: ['html', 'liquid', 'md'],
+		htmlTemplateEngine: 'liquid',
+		markdownTemplateEngine: 'liquid',
+	};
 };

@@ -1,9 +1,16 @@
-@tailwind base;
-
-h1 {
-	color: yellow;
+:root {
+	--color-primary: #ffa45b;
+	--color-secondary: #39311d;
 }
 
+@tailwind base;
+
 @tailwind components;
+
+html,
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px;
+}
 
 @tailwind utilities;
