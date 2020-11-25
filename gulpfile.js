@@ -4,17 +4,17 @@ const isProd = process.env.NODE_ENV === "production";
 const uglify = require("gulp-uglify");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano")({
-	preset: "default",
-	discardComments: { removeAll: true },
+  preset: "default",
+  discardComments: { removeAll: true },
 });
 const purgecss = require("@fullhuman/postcss-purgecss")({
-	// Specify the paths to all of the template files in your project
-	content: ["./src/**/*.liquid"],
-	whitelist: ["active", "fade-out", "loading"],
-	whitelistPatterns: [/swiper/g],
-	whitelistPatternsChildren: [/swiper/g],
-	// Include any special characters you're using in this regular expression
-	defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+  // Specify the paths to all of the template files in your project
+  content: ["./src/**/*.liquid"],
+  whitelist: ["active", "fade-out", "loading"],
+  whitelistPatterns: [/swiper/g],
+  whitelistPatternsChildren: [/swiper/g],
+  // Include any special characters you're using in this regular expression
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
 
 // browsersync server
@@ -31,9 +31,15 @@ function server(done) {
 // build js
 function jsBuild() {
   return gulp
-    .src("./src/assets/js/main.js", { sourcemaps: true })
+    .src("./src/assets/js/main.js", {
+      sourcemaps: process.env.NODE_ENV !== "production",
+    })
     .pipe(uglify())
-    .pipe(gulp.dest("./_site/assets/js/", { sourcemaps: true }));
+    .pipe(
+      gulp.dest("./_site/assets/js/", {
+        sourcemaps: process.env.NODE_ENV !== "production",
+      })
+    );
 }
 
 // build styles
