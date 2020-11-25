@@ -6,8 +6,6 @@
     <link href='apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
     <link href='favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
     <link href='favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-    <link href='site.webmanifest' rel='manifest'>
-    <link href='https://unpkg.com/aos@next/dist/aos.css' rel='stylesheet'/>
     <link href='https://fonts.gstatic.com' rel='preconnect'>
     <link href='https://fonts.gstatic.com' rel='preconnect'>
     <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Lato&display=swap' rel='stylesheet'>
@@ -39,36 +37,53 @@
     <meta property='twitter:image:alt' content="{{ imgAlt }}">
   </head>
   <body class='bg-primary'>
-    <header>
-      <div class='p-4 bg-primary flex justify-between items-center'>
-        <nav class='flex min-w-1/3'>
-          <a class='mr-5 text-white' href='#'>Work</a>
-          <a class='mr-5 text-white' href='#'>About</a>
-          <a class='mr-5 text-white' href='#'>Contact</a>
+    <header class='h-screen flex flex-col'>
+      <div class='container px-4 py-6 bg-primary flex justify-between flex-wrap flex-row-reverse'>
+        <div class='w-full mb-4 flex items-center justify-between md:w-1/2 md:mb-0 md:relative md:justify-end'>
+          <div class='w-1/3 md:hidden'></div>
+          <div class='w-1/3 text-center md:absolute md:left-2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2'>
+            <img alt='' class='w-16 h-auto inline-block' src='/assets/imgs/logowhite.png'>
+          </div>
+
+          <div class='flex justify-end w-1/3'>
+            {% for item in socials %}
+              <a class='ml-6 text-white hover:opacity-60 transition duration-200' href={{item.url}}>
+                <ion-icon name={{item.icon}} style='font-size: 26px;'></ion-icon>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <nav class='flex w-full justify-center md:w-1/2 items-center md:justify-start'>
+          <a class='mr-5 text-white hover:opacity-60 transition duration-200' href='#about'>About</a>
+          <a class='mr-5 text-white hover:opacity-60 transition duration-200' href='#work'>Work</a>
+          <a class='mr-5 text-white hover:opacity-60 transition duration-200' href='#portfolios'>Portfolios</a>
+          <a class='mr-5 text-white hover:opacity-60 transition duration-200' href='#contact'>Contact</a>
         </nav>
-        <img alt='' class='w-12 h-auto' src='/assets/imgs/logowhite.png'>
-        <div class='flex min-w-1/3 justify-end'>
-          <a class='ml-6 text-white' href=''>
-            <ion-icon name='logo-facebook' size='large'></ion-icon>
-          </a>
-          <a class='ml-6 text-white' href=''>
-            <ion-icon name='logo-github' size='large'></ion-icon>
-          </a>
-          <a class='ml-6 text-white' href=''>
-            <ion-icon name='logo-pinterest' size='large'></ion-icon>
-          </a>
-        </div>
+
       </div>
-      <div class='bg-primary h-screen'>
-        <div class='container flex flex-col justify-center items-center h-full'>
-          <h1 class='text-6xl text-white mb-2'>Hi! I'm Cam</h1>
-          <p class='text-white text-2xl'>A Frontend Developer</p>
-        </div>
+      <div class='flex-1 container flex flex-col justify-center items-center'>
+        <h1 class='text-6xl text-white mb-2'>Hi! I'm Cam</h1>
+        <p class='text-white font-bold'>A Frontend Developer</p>
       </div>
     </header>
     <main>
-      <section class='relative py-20 overflow-hidden text-white'>
-        <h2 class='text-white text-6xl font-bold absolute top-6 left-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;'>WORK</h2>
+      <section class='relative my-20 overflow-hidden' id='about'>
+        <h2 class='text-white text-6xl font-bold absolute left-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;'>ABOUT</h2>
+        <div class='container px-10'>
+          <h3 class='mb-3'>WHO I AM?</h3>
+          <p class='mb-6'>{{about}}</p>
+          <h3 class='mb-3'>MY SKILLS</h3>
+          <div class='flex flex-wrap justify-center'>
+            {% for item in skills %}
+              <ion-icon class='p-3' name={{item}} style='font-size:56px;'></ion-icon>
+            {% endfor %}
+          </div>
+        </div>
+
+      </section>
+      <section class='relative my-12 overflow-hidden'>
+        <h2 class='text-white text-6xl font-bold absolute right-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;'>WORK</h2>
         <div class='container relative px-10'>
           <div class='flex mb-4'>
             <div class='text-white flex-1 text-right pr-6'>June 2016 - April 2017</div>
@@ -116,64 +131,57 @@
           <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
         </div>
       </section>
-      <section class='relative bg-primary py-20 overflow-hidden text-white'>
-        <h2 class='text-white text-6xl font-bold absolute top-6 right-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>PORFOLIOS</h2>
-        <div class='container flex flex-wrap px-4'>
+      <section class='relative bg-primary my-12 overflow-hidden text-white'>
+        <h2 class='text-white text-6xl font-bold absolute left-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>PORTFOLIOS</h2>
+        <div class='container flex flex-wrap px-10'>
           {%- for item in portfolios -%}
-            <div class='w-full p-3 flex flex-col md:w-1/2'>
-            <div class='bg-white bg-opacity-30 rounded-2xl p-10 h-full'>
-              <span class='font-bold opacity-60'>{{item.type}}</span>
-              <h3 class='text-2xl font-bold mb-4'>{{item.name}}</h3>
-              <img alt='dti' class='mb-6 p-8 w-full h-auto' src='/assets/imgs/dti.png'>
-              <div>
-                <p class='text-sm italic mb-4'>
-                  {{item.des}}
-                </p>
-                <div class='flex'>
-                  <div class='w-1/2'>
-                    <h6 class='font-bold uppercase'>Positions</h6>
-                    {%- for i in item.positions -%}
-                      <p>{{i}}</p>
-                    {%- endfor -%}
-                  </div>
-                  <div class='w-1/2'>
-                    <h6 class='font-bold uppercase'>Techs</h6>
-                    <p>{{item.techs}}</p>
+            <div class='w-full p-3 flex flex-col lg:w-1/2'>
+              <div class='bg-white bg-opacity-30 rounded-2xl p-6 h-full'>
+                <span class='font-bold opacity-60'>{{item.type}}</span>
+                <h3 class='font-bold mb-4 text-2xl'>{{item.name}}</h3>
+                <img alt='dti' class='p-6 w-full h-auto md:p-10 lg:p-6' src={{item.img}}>
+                <div>
+                  <p class='italic mb-4'>
+                    {{item.des}}
+                  </p>
+                  <div class='flex'>
+                    <div class='w-1/2'>
+                      <h6 class='font-bold uppercase opacity-60 mb-1'>Positions</h6>
+                      {%- for i in item.positions -%}
+                        <p>{{i}}</p>
+                      {%- endfor -%}
+                    </div>
+                    <div class='w-1/2'>
+                      <h6 class='font-bold uppercase opacity-60 mb-1'>Techs</h6>
+                      <p>{{item.techs}}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           {%- endfor -%}
         </div>
       </section>
-      <section>
-        <div class='text-center text-6xl text-white p-10 container'>
+      <section class='my-36'>
+        <div class='text-center text-6xl text-white px-10 container'>
           I occasionally take on freelance opportunities.
         </div>
-        <div class='relative px-20'>
-          <h2 class='text-white text-6xl font-bold absolute left-0 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>CONTACT</h2>
-          <div class='container'>
+      </section>
+      <section class='relative mt-12 pb-20'>
+        <h2 class='text-white text-6xl font-bold absolute right-2 -top-10 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 10;'>CONTACT</h2>
+        <div class='container px-10'>
+          {% for item in contact %}
             <div class='text-white mb-2'>
-              <h6 class='text-2xl'>Email</h6>
-              <p class='text-xl opacity-80'>cam.phan12993@gmail.com</p>
+              <h6 class='font-bold opacity-60'>{{item.name}}</h6>
+              <p class='text-xl'>{{item.content}}</p>
             </div>
-            <div class='text-white mb-2'>
-              <h6 class='text-2xl'>Phone</h6>
-              <p class='text-xl opacity-80'>(+84) 935050930</p>
-            </div>
-            <div class='text-white'>
-              <h6 class='text-2xl'>Address</h6>
-              <p class='text-xl opacity-80'>Da Nang, Vietnam</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
 
       </section>
     </main>
-    <script src='https://unpkg.com/aos@next/dist/aos.js'></script>
-    <script src='https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js' type='module'></script>
+    <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js' type='module'></script>
+    <script nomodule='' src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js'></script>
     <script src='/assets/js/main.js'></script>
-    <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons.js'></script>
   </body>
 </html>
