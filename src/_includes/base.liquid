@@ -38,9 +38,9 @@
     <meta property='twitter:image' content="{{ imgSrc | prepend: siteUrl }}">
     <meta property='twitter:image:alt' content="{{ imgAlt }}">
   </head>
-  <body>
+  <body class='bg-primary'>
     <header>
-      <div class='h-14 px-4 bg-primary flex justify-between items-center fixed w-full z-50'>
+      <div class='p-4 bg-primary flex justify-between items-center'>
         <nav class='flex min-w-1/3'>
           <a class='mr-5 text-white' href='#'>Work</a>
           <a class='mr-5 text-white' href='#'>About</a>
@@ -48,18 +48,18 @@
         </nav>
         <img alt='' class='w-12 h-auto' src='/assets/imgs/logowhite.png'>
         <div class='flex min-w-1/3 justify-end'>
-          <a class='ml-3 text-white' href=''>
-            <ion-icon name='logo-facebook'></ion-icon>
+          <a class='ml-6 text-white' href=''>
+            <ion-icon size="large" name='logo-facebook'></ion-icon>
           </a>
-          <a class='ml-3 text-white' href=''>
-            <ion-icon name='logo-github'></ion-icon>
+          <a class='ml-6 text-white' href=''>
+            <ion-icon size="large" name='logo-github'></ion-icon>
           </a>
-          <a class='ml-3 text-white' href=''>
-            <ion-icon name='logo-pinterest'></ion-icon>
+          <a class='ml-6 text-white' href=''>
+            <ion-icon size="large" name='logo-pinterest'></ion-icon>
           </a>
         </div>
       </div>
-      <div class=' pt-14 bg-primary h-screen'>
+      <div class='bg-primary h-screen'>
         <div class='container flex flex-col justify-center items-center h-full'>
           <h1 class='text-6xl text-white mb-2'>Hi! I'm Cam</h1>
           <p class='text-white text-2xl'>A Frontend Developer</p>
@@ -67,16 +67,16 @@
       </div>
     </header>
     <main>
-      <section class='relative bg-secondary py-20 overflow-hidden'>
+      <section class='relative py-20 overflow-hidden text-white'>
         <h2 class='text-white text-6xl font-bold absolute top-6 left-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;'>WORK</h2>
-        <div class='container relative'>
+        <div class='container relative px-10'>
           <div class='flex mb-4'>
             <div class='text-white flex-1 text-right pr-6'>June 2016 - April 2017</div>
             <div class='text-white flex-1 pl-6'>
               <h3 class='font-bold'>
                 FPT Software
               </h3>
-              <p>
+              <p class='opacity-80'>
                 Java Developer
               </p>
             </div>
@@ -87,13 +87,13 @@
               <h3 class='font-bold'>
                 Enouvo IT Solution
               </h3>
-              <p>
+              <p class='opacity-80'>
                 Senior Frontend Developer
               </p>
-              <p>
+              <p class='opacity-80'>
                 Angular Team Leader
               </p>
-              <p>
+              <p class='opacity-80'>
                 Project Manager
               </p>
             </div>
@@ -104,10 +104,10 @@
               <h3 class='font-bold'>
                 Freelancer
               </h3>
-              <p>
+              <p class='opacity-80'>
                 Website Developer
               </p>
-              <p>
+              <p class='opacity-80'>
                 Graphic Design
               </p>
             </div>
@@ -116,53 +116,80 @@
           <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
         </div>
       </section>
-      <section class='relative bg-primary py-20 overflow-hidden'>
-        <h2 class='text-white text-6xl font-bold absolute top-6 right-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;'>PORFOLIOS</h2>
-        <div class='container flex'>
-          <div class='bg-white rounded-2xl w-1/2 p-6 flex flex-col mx-4'>
-            <span class='text-secondary font-bold opacity-60'>Web</span>
-            <h3 class='text-secondary text-2xl font-bold mb-4'>DTI System</h3>
-            <img alt='dti' class='mb-6' src='/assets/imgs/dti.png'>
-            <div>
-              <p class='text-sm italic mb-2'>
-                DTI develops and provides world-leading surveillance, video analytics, and passenger information systems technology and services to the mobile transit industry worldwide.
-              </p>
-              <div class='flex'>
-                <div class='w-1/2'>
-                  <h6 class='font-bold uppercase'>Position</h6>
-                  <p>Project Manager</p>
-                  <p>Web Developer</p>
-                </div>
-                <div class='w-1/2'>
-                  <h6 class='font-bold uppercase'>Techs</h6>
-                  <p>Angular / .Net</p>
+      <section class='relative bg-primary py-20 overflow-hidden text-white'>
+        <h2 class='text-white text-6xl font-bold absolute top-6 right-0 text-opacity-70 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>PORFOLIOS</h2>
+        <div class='container flex flex-wrap px-4'>
+          <div class='w-full p-3 flex flex-col md:w-1/2'>
+            <div class='bg-white bg-opacity-30 rounded-2xl p-10 h-full'>
+              <span class='font-bold opacity-60'>Web</span>
+              <h3 class='text-2xl font-bold mb-4'>DTI System</h3>
+              <img alt='dti' class='mb-6 p-8 w-full h-auto' src='/assets/imgs/dti.png'>
+              <div>
+                <p class='text-sm italic mb-4'>
+                  DTI develops and provides world-leading surveillance, video analytics, and passenger information systems technology and services to the mobile transit industry worldwide.
+                </p>
+                <div class='flex'>
+                  <div class='w-1/2'>
+                    <h6 class='font-bold uppercase'>Position</h6>
+                    <p>Project Manager</p>
+                    <p>Web Developer</p>
+                  </div>
+                  <div class='w-1/2'>
+                    <h6 class='font-bold uppercase'>Techs</h6>
+                    <p>Angular / .Net</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class='bg-white rounded-2xl w-1/2 p-6 flex flex-col'>
-            <span class='text-secondary font-bold opacity-60'>Web</span>
-            <h3 class='text-secondary text-2xl font-bold mb-4'>DTI System</h3>
-            <img alt='dti' class='mb-6' src='/assets/imgs/dti.png'>
-            <div>
-              <p class='text-sm italic mb-2'>
-                DTI develops and provides world-leading surveillance, video analytics, and passenger information systems technology and services to the mobile transit industry worldwide.
-              </p>
-              <div class='flex'>
-                <div class='w-1/2'>
-                  <h6 class='font-bold uppercase'>Position</h6>
-                  <p>Project Manager</p>
-                  <p>Web Developer</p>
-                </div>
-                <div class='w-1/2'>
-                  <h6 class='font-bold uppercase'>Techs</h6>
-                  <p>Angular / .Net</p>
+          <div class='p-3 flex flex-col w-full md:w-1/2'>
+            <div class='bg-white bg-opacity-30 rounded-2xl p-10 h-full'>
+              <span class='font-bold opacity-60'>Web</span>
+              <h3 class='text-2xl font-bold mb-4'>My Accoutant</h3>
+              <img alt='dti' class='mb-6 p-8 w-full h-auto' src='/assets/imgs/myaccoutant.png'>
+              <div class="text-white">
+                <p class='text-sm italic mb-4'>
+                  An all-in-one accounting and tax app which offer a more efficient and enjoyable way for a business to manage its accounts. Starting with the purpose to serve the Australian market, after several years of expansion, My Accountant is expanding on the global scale with a worldwide version.
+                </p>
+                <div class='flex'>
+                  <div class='w-1/2'>
+                    <h6 class='font-bold uppercase'>Position</h6>
+                    <p>Web Developer</p>
+                  </div>
+                  <div class='w-1/2'>
+                    <h6 class='font-bold uppercase'>Techs</h6>
+                    <p>Angular / .Net / React Native</p>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
 
         </div>
+      </section>
+      <section>
+        <div class="text-center text-6xl text-white p-10 container">
+          I occasionally take on freelance opportunities.
+        </div>
+        <div class="relative px-20">
+          <h2 class='text-white text-6xl font-bold absolute left-0 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>CONTACT</h2>
+<div class="container">
+          <div class="text-white mb-2">
+            <h6 class="text-2xl">Email</h6>
+            <p class="text-xl opacity-80">cam.phan12993@gmail.com</p>
+          </div>
+          <div class="text-white mb-2">
+            <h6 class="text-2xl">Phone</h6>
+            <p class="text-xl opacity-80">(+84) 935050930</p>
+          </div>
+          <div class="text-white">
+            <h6 class="text-2xl">Address</h6>
+            <p class="text-xl opacity-80">Da Nang, Vietnam</p>
+          </div>
+        </div>
+        </div>
+        
       </section>
     </main>
     <script src='https://unpkg.com/aos@next/dist/aos.js'></script>

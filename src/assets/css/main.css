@@ -1,6 +1,6 @@
 :root {
-	--color-primary: #ffa45b;
-	--color-secondary: #39311d;
+  --color-primary: #ffa45b;
+  --color-secondary: #39311d;
 }
 
 @tailwind base;
@@ -9,8 +9,8 @@
 
 html,
 body {
-	font-family: 'Nunito', sans-serif;
-	font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
 }
 
 @tailwind utilities;
