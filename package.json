@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx gulp build",
+    "gulp:build": "npx gulp build",
     "eleventy:watch": "npx eleventy --watch",
     "gulp:watch": "npx gulp watch",
-    "start": "npm-run-all --parallel *:watch"
+    "start": "npm-run-all --parallel *:watch",
+    "build": "npx gulp build && npx eleventy"
   },
   "repository": {
     "type": "git",
