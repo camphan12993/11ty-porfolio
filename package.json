@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp:build": "npx gulp build",
-    "eleventy:watch": "npx eleventy --watch",
-    "gulp:watch": "npx gulp watch",
+    "eleventy:watch": "eleventy --watch",
+    "gulp:watch": "gulp watch",
     "start": "npm-run-all --parallel *:watch",
     "build": "gulp build && eleventy"
   },
