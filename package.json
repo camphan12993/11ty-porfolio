@@ -48,5 +48,7 @@
       "env"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "postcss-import": "^13.0.0"
+  }
 }
