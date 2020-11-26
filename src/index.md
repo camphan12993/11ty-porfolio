@@ -40,4 +40,15 @@ portfolios:
       - Web Developer
     techs: Angular / .Net
     img: /assets/imgs/dti.png
+  - name: DTI System
+    type: Web
+    des:
+      DTI develops and provides world-leading surveillance, video analytics, and
+      passenger information systems technology and services to the mobile transit industry
+      worldwide.
+    positions:
+      - Project Manager
+      - Web Developer
+    techs: Angular / .Net
+    img: /assets/imgs/dti.png
 ---

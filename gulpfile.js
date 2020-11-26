@@ -44,6 +44,7 @@ function jsBuild() {
 
 // build styles
 function stylesBuild() {
+  console.log(process.env.NODE_ENV);
   return gulp
     .src("./src/assets/css/main.css")
     .pipe(
@@ -63,7 +64,7 @@ function watchFiles() {
 }
 
 const build = gulp.series(gulp.parallel(stylesBuild, jsBuild));
-const watch = gulp.parallel(server, watchFiles);
+const watch = gulp.series(build,gulp.parallel(server, watchFiles));
 
 exports.build = build;
 exports.watch = watch;

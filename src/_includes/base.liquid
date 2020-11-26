@@ -9,6 +9,8 @@
     <link href='https://fonts.gstatic.com' rel='preconnect'>
     <link href='https://fonts.gstatic.com' rel='preconnect'>
     <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Lato&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/swiper/swiper-bundle.css' rel='stylesheet'>
+    <link href='https://unpkg.com/swiper/swiper-bundle.min.css' rel='stylesheet'>
     <link href='/assets/css/main.css' rel='stylesheet'/>
 
     <title>{{ title }}
@@ -66,9 +68,14 @@
         <h1 class='text-6xl text-white mb-2'>Hi! I'm Cam</h1>
         <p class='text-white font-bold'>A Frontend Developer</p>
       </div>
+      <div class='text-center pb-6'>
+        <a href='#about'>
+          <ion-icon class='text-4xl animate-bounce cursor-pointer hover:opacity-60 transition duration-300' name='chevron-down-outline'></ion-icon>
+        </a>
+      </div>
     </header>
     <main>
-      <section class='relative my-20 overflow-hidden' id='about'>
+      <section class='relative py-20' id='about'>
         <h2 class='text-white text-6xl font-bold absolute left-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;'>ABOUT</h2>
         <div class='container px-10'>
           <h3 class='mb-3'>WHO I AM?</h3>
@@ -82,7 +89,7 @@
         </div>
 
       </section>
-      <section class='relative my-12 overflow-hidden' id='work'>
+      <section class='relative py-12' id='work'>
         <h2 class='text-white text-6xl font-bold absolute right-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;'>WORK</h2>
         <div class='container relative px-10'>
           <div class='flex mb-4'>
@@ -131,38 +138,52 @@
           <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
         </div>
       </section>
-      <section class='relative bg-primary my-12 overflow-hidden text-white' id='portfolios'>
+      <section class='relative bg-primary py-12' id='portfolios'>
         <h2 class='text-white text-6xl font-bold absolute left-2 text-opacity-30 tracking-widest font-title' style='writing-mode: vertical-rl;z-index: 0;'>PORTFOLIOS</h2>
         <div class='container flex flex-wrap px-10'>
-          {%- for item in portfolios -%}
-            <div class='w-full p-3 flex flex-col lg:w-1/2'>
-              <div class='bg-white bg-opacity-30 rounded-2xl p-6 h-full'>
-                <span class='font-bold opacity-60'>{{item.type}}</span>
-                <h3 class='font-bold mb-4 text-2xl'>{{item.name}}</h3>
-                <img alt='dti' class='p-6 w-full h-auto md:p-10 lg:p-6' src={{item.img}}>
-                <div>
-                  <p class='italic mb-4'>
-                    {{item.des}}
-                  </p>
-                  <div class='flex'>
-                    <div class='w-1/2'>
-                      <h6 class='font-bold uppercase opacity-60 mb-1'>Positions</h6>
-                      {%- for i in item.positions -%}
-                        <p>{{i}}</p>
-                      {%- endfor -%}
+          <div class='swiper-container'>
+            <div class='swiper-wrapper'>
+              {%- for item in portfolios -%}
+                <div class='swiper-slide'>
+                  <div class='w-full p-3 flex flex-col md:flex-row md:justify-center md:items-center'>
+                    <div class='relative hidden md:block md:pb-1/2 w-1/2 px-4 lg:pb-1/3'>
+                      <img alt='dti' class='bg-white bg-opacity-30 rounded-2xl absolute p-6 inset-0 w-full h-full object-contain object-center' src={{item.img}}>
+
                     </div>
-                    <div class='w-1/2'>
-                      <h6 class='font-bold uppercase opacity-60 mb-1'>Techs</h6>
-                      <p>{{item.techs}}</p>
+                    <div class='bg-white bg-opacity-30 rounded-2xl p-6 md:bg-opacity-0 md:rounded-none md:w-1/2'>
+                      <span class='font-bold opacity-60'>{{item.type}}</span>
+                      <h3 class='font-bold mb-4 text-2xl'>{{item.name}}</h3>
+                      <div class='relative md:hidden pb-full w-full pt-4 pl-4 pr-4 mb-4'>
+                        <img alt='dti' class='absolute px-4 inset-0 w-full h-full object-contain object-center' src={{item.img}}>
+                      </div>
+                      <p class='italic mb-4'>
+                        {{item.des}}
+                      </p>
+                      <div class='flex'>
+                        <div class='w-1/2'>
+                          <h6 class='font-bold uppercase opacity-60 mb-1'>Positions</h6>
+                          {%- for i in item.positions -%}
+                            <p>{{i}}</p>
+                          {%- endfor -%}
+                        </div>
+                        <div class='w-1/2'>
+                          <h6 class='font-bold uppercase opacity-60 mb-1'>Techs</h6>
+                          <p>{{item.techs}}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+
+              {%- endfor -%}
             </div>
-          {%- endfor -%}
+            <div class='swiper-button-next swiper-button-white'></div>
+            <div class='swiper-button-prev swiper-button-white'></div>
+          </div>
+
         </div>
       </section>
-      <section class='my-36'>
+      <section class='py-36'>
         <div class='text-center text-6xl text-white px-10 container'>
           I occasionally take on freelance opportunities.
         </div>
@@ -180,6 +201,8 @@
 
       </section>
     </main>
+    <script src='https://unpkg.com/swiper/swiper-bundle.js'></script>
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
     <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js' type='module'></script>
     <script nomodule='' src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js'></script>
     <script src='/assets/js/main.js'></script>
