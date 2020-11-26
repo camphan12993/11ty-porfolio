@@ -48,8 +48,8 @@ function stylesBuild() {
     .pipe(
       postcss([
         postcssimport(),
+        require("tailwindcss")('./tailwind.config.js'),
         require("autoprefixer"),
-        require("tailwindcss"),
         ...(process.env.NODE_ENV === "production" ? [purgecss, cssnano] : []),
       ])
     )
