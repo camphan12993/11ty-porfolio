@@ -43,7 +43,7 @@ section > div {
 }
 
 /* loading */
-#loading.fade-out {
+.loading.fade-out {
   animation: fadeOut 1s both ease-in-out;
 }
 
