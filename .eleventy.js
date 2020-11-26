@@ -10,16 +10,6 @@ module.exports = function (config) {
 	config.addPassthroughCopy('favicon.ico');
 	config.addPassthroughCopy('src/assets/imgs');
 
-	config.addPlugin(lazyImagesPlugin, {
-		transformImgPath: (imgPath) => {
-			if (imgPath.startsWith('/assets/imgs') && !imgPath.startsWith('//')) {
-				return `./src${imgPath}`;
-			}
-
-			return imgPath;
-		},
-	});
-
 	// html minify
 	if (process.env.NODE_ENV == 'production') {
 		config.addTransform('htmlmin', function (content, outputPath) {

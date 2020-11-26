@@ -44,7 +44,6 @@ function jsBuild() {
 
 // build styles
 function stylesBuild() {
-  console.log(process.env.NODE_ENV);
   return gulp
     .src("./src/assets/css/main.css")
     .pipe(

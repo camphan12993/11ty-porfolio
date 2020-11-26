@@ -29,7 +29,7 @@ var percentageUnit = {
 };
 module.exports = {
 	purge: [],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: "class", // or 'media' or 'class'
 	theme: {
 		extend: {
 			spacing: percentageUnit,
@@ -42,6 +42,8 @@ module.exports = {
 			colors: {
 				primary: 'var(--color-primary)',
 				secondary: 'var(--color-secondary)',
+				ancient: 'var(--color-ancient)',
+				textPrimary: 'var(--text-primary)'
 			},
 		},
 		fontFamily: {
