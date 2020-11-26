@@ -42,7 +42,8 @@
     <div class='loading fixed inset-0 flex items-center justify-center bg-primary overflow-hidden' id='loading' style='z-index: 1000;'>
       <img alt='logo-animated' class='w-20 sm:w-28' src='/assets/imgs/logo-animated.gif'>
     </div>
-    <div class='fixed top-1/2 right-2 transform -translate-y-1/2 border rounded-full flex items-center justify-center w-10 h-10 cursor-pointer hover:opacity-60 transition duration-300 z-50' id='toggleBtn' onclick='toggleDarkMode()'>
+    <div class='fixed top-1/2 right-2 transform -translate-y-1/2 rounded-full flex items-center justify-center w-10 h-10 cursor-pointer hover:opacity-60 transition duration-300 z-50' id='toggleBtn' onclick='toggleDarkMode()'>
+      <span class='absolute animate-pulse w-full h-full bg-white bg-opacity-60 rounded-full'></span>
       <ion-icon class='text-2xl' name='moon-outline'></ion-icon>
     </div>
     <header class='h-screen flex flex-col'>
