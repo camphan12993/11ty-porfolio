@@ -14,5 +14,22 @@ body {
   color: white;
   scroll-behavior: smooth;
 }
+section {
+  @apply px-4 py-16;
+}
+
+section h2 {
+  @apply text-white text-4xl text-center mb-10 sm:text-6xl font-bold sm:absolute text-opacity-30 tracking-widest font-title;
+}
+
+section > div {
+  @apply sm:px-12;
+}
+
+@screen sm {
+  section h2 {
+    writing-mode: vertical-rl;
+  }
+}
 
 @tailwind utilities;

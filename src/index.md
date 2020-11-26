@@ -7,6 +7,7 @@ imgSrc: "/assets/img/thumnail.jpg"
 imgAtl: Cam Phan
 layout: base.liquid
 about: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque libero quis consectetur ut earum vel suscipit, iste minus dignissimos? Dolore nesciunt aliquam perferendis praesentium veritatis repudiandae deserunt quaerat, ratione natus molestiae, quo atque placeat laborum. Modi earum libero nisi nihil vitae, dicta maxime soluta numquam error aliquid quae aliquam cum, tempora, ex quod. Provident alias mollitia facere quae debitis obcaecati vel soluta dolore nobis accusamus, magni maiores? Laudantium aliquid magnam quas, excepturi a at porro quos. Cumque, culpa. Dolore, quas!
+cv: /assets/files/cv.pdf
 skills:
   - logo-angular
   - logo-react
