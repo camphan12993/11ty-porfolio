@@ -3,6 +3,7 @@ const browsersync = require("browser-sync").create();
 const isProd = process.env.NODE_ENV === "production";
 const uglify = require("gulp-uglify");
 const postcss = require("gulp-postcss");
+const postcssimport = require("postcss-import");
 const cssnano = require("cssnano")({
   preset: "default",
   discardComments: { removeAll: true },
@@ -10,9 +11,7 @@ const cssnano = require("cssnano")({
 const purgecss = require("@fullhuman/postcss-purgecss")({
   // Specify the paths to all of the template files in your project
   content: ["./src/**/*.liquid"],
-  whitelist: ["active", "fade-out", "loading"],
-  whitelistPatterns: [/swiper/g],
-  whitelistPatternsChildren: [/swiper/g],
+  safelist: ["active", "fade-out", "loading", /swiper/g],
   // Include any special characters you're using in this regular expression
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
@@ -48,6 +47,7 @@ function stylesBuild() {
     .src("./src/assets/css/main.css")
     .pipe(
       postcss([
+        postcssimport(),
         require("autoprefixer"),
         require("tailwindcss"),
         ...(process.env.NODE_ENV === "production" ? [purgecss, cssnano] : []),
