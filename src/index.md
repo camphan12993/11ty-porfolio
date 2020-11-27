@@ -37,6 +37,13 @@ socials:
   url: https://github.com/camphan12993
   icon: logo-github
 portfolios:
+- name: My Accountant
+  type: Web
+  des: An all-in-one accounting and tax app which offer a more efficient and enjoyable
+    way for a business to manage its accounts
+  positions: ''
+  techs: Angular / .Net / React Native
+  img: "/assets/imgs/myaccountant.png"
 - name: DTI System
   type: Web
   des: DTI develops and provides world-leading surveillance, video analytics, and
