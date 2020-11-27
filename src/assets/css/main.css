@@ -42,6 +42,10 @@ section > div {
   }
 }
 
+.container-md {
+  max-width: 768px;
+}
+
 /* loading */
 .loading.fade-out {
   animation: fadeOut 1s both ease-in-out;
