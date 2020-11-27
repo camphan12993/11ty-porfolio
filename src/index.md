@@ -40,7 +40,8 @@ portfolios:
 - name: Enoukid
   type: Web
   des: An online learning application for children
-  positions: ''
+  positions:
+  - Web Developer
   techs: Angular / React Native / NodeJs
   img: "/assets/imgs/enoukid.png"
 - name: My Accountant
