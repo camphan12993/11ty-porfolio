@@ -65,7 +65,7 @@ portfolios:
   techs: Angular / .Net / React Native
   img: "/assets/imgs/myaccountant.png"
   sourceUrl: 
-  demoUrl: 
+  demoUrl: https://myaccountantapp.com.au/
 - name: DTI System
   type: Web
   des: DTI develops and provides world-leading surveillance, video analytics, and
