@@ -174,7 +174,7 @@
                       <p class='italic mb-4'>
                         {{item.des}}
                       </p>
-                      <div class='flex'>
+                      <div class='flex mb-6'>
                         <div class='w-1/2'>
                           <h6 class='font-bold uppercase opacity-60 mb-1'>Positions</h6>
                           {%- for i in item.positions -%}
@@ -185,6 +185,14 @@
                           <h6 class='font-bold uppercase opacity-60 mb-1'>Techs</h6>
                           <p>{{item.techs}}</p>
                         </div>
+                      </div>
+                      <div class='flex justify-center md:justify-start'>
+                        {% if item.demoUrl and item.demoUrl != '' %}
+                          <a class='w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4' href={{item.demoUrl}}>Demo</a>
+                        {% endif %}
+                        {% if item.sourceUrl and  item.sourceUrl != ''%}
+                          <a class='w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300' href={{item.sourceUrl}}>Source</a>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
