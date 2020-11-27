@@ -37,6 +37,12 @@ socials:
   url: https://github.com/camphan12993
   icon: logo-github
 portfolios:
+- name: Enoukid
+  type: Web
+  des: An online learning application for children
+  positions: ''
+  techs: Angular / React Native / NodeJs
+  img: "/assets/imgs/enoukid.png"
 - name: My Accountant
   type: Web
   des: An all-in-one accounting and tax app which offer a more efficient and enjoyable
