@@ -86,7 +86,21 @@
         <div class='container container-md'>
           <h2 class='sm:left-2'>ABOUT</h2>
           <h3 class='mb-3'>WHO I AM?</h3>
-          <p class='mb-6'>{{about}}</p>
+          <div class='flex'>
+            <div class='mr-6'>
+              <h6 class='font-bold opacity-60 mb-2'>Full name
+              </h6>
+              <p class='mb-3'>{{fullname}}</p>
+            </div>
+            <div>
+              <h6 class='font-bold opacity-60 mb-2'>Date Of Birth</h6>
+              <p class='mb-3'>{{dateOfBirth}}</p>
+            </div>
+          </div>
+          <p class='mb-6 italic font-extralight'>"
+            {{about}}
+            "</p>
+
           <h3 class='mb-3'>MY SKILLS</h3>
           <div class='flex flex-wrap justify-center mb-6'>
             {% for item in skills %}
@@ -108,6 +122,17 @@
           <h2 class='sm:right-2'>WORK</h2>
           <div class='relative'>
             <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
+            <div class='flex mb-4'>
+              <div class=' flex-1 text-right pr-6'>2011 - May 2016</div>
+              <div class=' flex-1 pl-6'>
+                <h3 class='font-bold'>
+                  Da Nang University Of Technology
+                </h3>
+                <p class='opacity-80'>
+                  Infomation Technology Department
+                </p>
+              </div>
+            </div>
             <div class='flex mb-4'>
               <div class=' flex-1 text-right pr-6'>June 2016 - April 2017</div>
               <div class=' flex-1 pl-6'>

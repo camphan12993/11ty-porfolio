@@ -11,6 +11,8 @@ about:
   attracted by that sort of thing on the internet and bring them on my  projects.To
   me, inspiration is the decisive factor of success of work
 cv: "/assets/imgs/camphan.pdf"
+fullname: Phan Huynh Cam
+dateOfBirth: 12/09/1993
 skills:
   - logo-angular
   - logo-react
