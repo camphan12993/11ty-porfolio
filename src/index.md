@@ -37,6 +37,13 @@ socials:
   url: https://github.com/camphan12993
   icon: logo-github
 portfolios:
+- name: Chat App UI
+  type: Mobile
+  des: An Chat App UI using Flutter
+  positions:
+  - Self-Project
+  techs: Flutter
+  img: chatapp.png
 - name: Enoukid
   type: Web
   des: An online learning application for children
