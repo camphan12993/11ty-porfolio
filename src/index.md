@@ -41,7 +41,9 @@ portfolios:
   type: Web
   des: An all-in-one accounting and tax app which offer a more efficient and enjoyable
     way for a business to manage its accounts
-  positions: ''
+  positions:
+  - Admin Web Developer
+  - Admin Web Leader
   techs: Angular / .Net / React Native
   img: "/assets/imgs/myaccountant.png"
 - name: DTI System
