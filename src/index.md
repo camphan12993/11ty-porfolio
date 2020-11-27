@@ -37,6 +37,17 @@ socials:
   url: https://github.com/camphan12993
   icon: logo-github
 portfolios:
+- name: Rooster World Landing Page
+  type: Web
+  des: An Landing Page for Rooster World Vietnam, an company which specializes in
+    Design, Website and 3D
+  positions:
+  - Developer
+  - Product Owner
+  techs: Eleventy / Netlify / Forestry Cms
+  img: "/assets/imgs/roosterworld.png"
+  sourceUrl: https://github.com/camphan12993/rooster-world-landing-11ty
+  demoUrl: https://rooster-world.com/
 - name: Chat App UI
   type: Mobile
   des: An Chat App UI using Flutter
