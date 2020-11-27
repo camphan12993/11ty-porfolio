@@ -9,7 +9,7 @@ layout: base.liquid
 about: Technology changes and is upgraded rapidly everyday. I'm a developer who is
   attracted by that sort of thing on the internet and bring them on my  projects.To
   me, inspiration is the decisive factor of success of work
-cv: "/assets/files/camphan.pdf"
+cv: "/assets/imgs/camphan.pdf"
 skills:
 - logo-angular
 - logo-react
