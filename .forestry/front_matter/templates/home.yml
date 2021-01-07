@@ -1,0 +1,91 @@
+---
+label: home
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: siteUrl
+  label: siteUrl
+- type: text
+  name: siteName
+  label: siteName
+- type: file
+  name: imgSrc
+  label: imgSrc
+- type: text
+  name: imgAtl
+  label: imgAtl
+- type: text
+  name: layout
+  label: layout
+- type: textarea
+  name: about
+  label: about
+- type: file
+  name: cv
+  label: cv
+- type: text
+  name: fullname
+  label: fullname
+- type: datetime
+  name: dateOfBirth
+  label: dateOfBirth
+- type: list
+  name: skills
+  label: skills
+- type: field_group_list
+  name: contact
+  label: contact
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: content
+    label: content
+- type: field_group_list
+  name: socials
+  label: socials
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: icon
+    label: icon
+- type: field_group_list
+  name: portfolios
+  label: portfolios
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: des
+    label: des
+  - type: list
+    name: positions
+    label: positions
+  - type: text
+    name: techs
+    label: techs
+  - type: file
+    name: img
+    label: img
+  - type: text
+    name: sourceUrl
+    label: sourceUrl
+  - type: text
+    name: demoUrl
+    label: demoUrl
