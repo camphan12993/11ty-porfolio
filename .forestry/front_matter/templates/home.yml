@@ -91,7 +91,7 @@ fields:
     label: demoUrl
 - name: test
   type: select
-  default: []
+  default: '22'
   config:
     required: false
     options:
@@ -106,3 +106,4 @@ fields:
   label: test
   showOnly:
     field: test
+    value: '22'
