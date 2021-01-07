@@ -88,19 +88,17 @@ fields:
     label: demoUrl
 - name: title
   type: select
-  default: '22'
+  default: 'sf '
   config:
-    required: false
+    required: true
     options:
-    - '22'
-    - '213'
-    - sdfsdf
+    - 'sf '
+    - sdf
+    - sdf
+    - sdf
     source:
       type: simple
       section: 
       file: 
       path: 
   label: title
-  showOnly:
-    field: test
-    value: '22'
