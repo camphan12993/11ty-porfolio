@@ -89,3 +89,18 @@ fields:
   - type: text
     name: demoUrl
     label: demoUrl
+- name: test
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - '22'
+    - '213'
+    - sdfsdf
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: test
