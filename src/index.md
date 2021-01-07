@@ -53,7 +53,7 @@ portfolios:
   techs: Flutter
   img: "/assets/imgs/chatapp.png"
   sourceUrl: https://github.com/camphan12993/chat-app-ui
-  demoUrl: 
+  demoUrl: ''
 - name: Enoukid
   type: Web
   des: An online learning application for children
@@ -61,8 +61,8 @@ portfolios:
   - Web Developer
   techs: Angular / React Native / NodeJs
   img: "/assets/imgs/enoukid.png"
-  sourceUrl: 
-  demoUrl: 
+  sourceUrl: ''
+  demoUrl: ''
 - name: My Accountant
   type: Web
   des: An all-in-one accounting and tax app which offer a more efficient and enjoyable
@@ -72,7 +72,7 @@ portfolios:
   - Admin Web Leader
   techs: Angular / .Net / React Native
   img: "/assets/imgs/myaccountant.png"
-  sourceUrl: 
+  sourceUrl: ''
   demoUrl: https://myaccountantapp.com.au/
 - name: DTI System
   type: Web
@@ -84,8 +84,8 @@ portfolios:
   - Web Developer
   techs: Angular / .Net
   img: "/assets/imgs/dti.png"
-  sourceUrl: 
-  demoUrl: 
+  sourceUrl: ''
+  demoUrl: ''
 - name: The Book Library & Coffee
   type: Web
   des: The management system for TheBooks library and TheBooks POS
@@ -93,7 +93,7 @@ portfolios:
   - Web Developer
   techs: React / .Net
   img: "/assets/imgs/the.png"
-  sourceUrl: 
-  demoUrl: 
+  sourceUrl: ''
+  demoUrl: ''
 
 ---
