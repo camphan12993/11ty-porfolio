@@ -1,4 +1,9 @@
 ---
 label: home
 hide_body: true
-fields: []
+fields:
+- name: imgurl
+  type: file
+  config:
+    maxSize: 64
+  label: imgurl
