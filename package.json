@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/camphan12993/11ty-porfolio#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.11.1"
   },
   "babel": {
     "presets": [
