@@ -7,7 +7,7 @@
     "eleventy:watch": "eleventy --watch",
     "gulp:watch": "gulp watch",
     "start": "npm-run-all --parallel *:watch",
-    "build": "npx gulp build && eleventy"
+    "build": "gulp build && eleventy"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/camphan12993/11ty-porfolio#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
   },
   "babel": {
     "presets": [
@@ -28,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "tailwindcss": "^2.0.1",
     "gulp": "^4.0.2",
     "@babel/core": "^7.12.3",
