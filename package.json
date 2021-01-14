@@ -41,7 +41,6 @@
     "postcss-import": "^13.0.0",
     "autoprefixer": "^10.0.2",
     "postcss": "^8.1.7",
-    "tailwindcss": "^2.0.1"
   },
   "babel": {
     "presets": [
@@ -49,6 +48,7 @@
     ]
   },
   "dependencies": {
-    "postcss-import": "^13.0.0"
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "^2.0.1"
   }
 }
