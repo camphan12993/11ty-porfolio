@@ -34,6 +34,16 @@ socials:
   url: https://github.com/camphan12993
   icon: logo-github
 portfolios:
+- name: Nmimi Official Website
+  type: Landing Page
+  des: Fashion store Landing page
+  positions:
+  - Product Owner
+  - Developer
+  techs: Eleventy, Netlify, Forestry Cms
+  img: "/assets/imgs/screen-shot-2021-01-14-at-11-14-12.png"
+  sourceUrl: https://github.com/camphan12993/nmimi-landing
+  demoUrl: https://www.nmimiclothing.com/
 - name: Rooster World Landing Page
   type: Web
   des: A Landing Page for Rooster World Vietnam, a company which specializes in Design,
