@@ -21,6 +21,15 @@
   "homepage": "https://github.com/camphan12993/11ty-porfolio#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.1",
+    "gulp": "^4.0.2",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@fullhuman/postcss-purgecss": "^3.0.0",
@@ -40,15 +49,5 @@
     "postcss-import": "^13.0.0",
     "autoprefixer": "^10.0.2",
     "postcss": "^8.1.7"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  },
-  "dependencies": {
-    "postcss-import": "^13.0.0",
-    "tailwindcss": "^2.0.1",
-    "gulp": "^4.0.2"
   }
 }
