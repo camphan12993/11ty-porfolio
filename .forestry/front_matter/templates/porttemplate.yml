@@ -89,3 +89,5 @@ fields:
   - type: text
     name: demoUrl
     label: demoUrl
+pages:
+- src/index.md
