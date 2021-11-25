@@ -41,7 +41,7 @@ portfolios:
   - UI/UX
   - Flutter
   techs: Flutter, Figma
-  img: ''
+  img: "/assets/imgs/dashboard.png"
   sourceUrl: https://github.com/camphan12993/store_reponsive_dashboard
   demoUrl: ''
 - name: Nmimi Official Website
