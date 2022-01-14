@@ -1,0 +1,10 @@
+{
+  "safelist": [
+    "active",
+    "fade-out",
+    "loading",
+    "theme-dark",
+    "typing",
+    "blink-caret"
+  ]
+}

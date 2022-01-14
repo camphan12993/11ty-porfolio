@@ -20,34 +20,19 @@
   },
   "homepage": "https://github.com/camphan12993/11ty-porfolio#readme",
   "devDependencies": {
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "tailwindcss": "^2.0.1",
+    "@11ty/eleventy": "^1.0.0",
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "cssnano": "^4.1.11",
+    "eleventy-plugin-lazyimages": "^2.1.2",
     "gulp": "^4.0.2",
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@fullhuman/postcss-purgecss": "^3.0.0",
-    "babel-loader": "^8.2.1",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.26.13",
-    "browserify": "^17.0.0",
-    "cssnano": "^4.1.10",
-    "eleventy-plugin-lazyimages": "^2.1.0",
-    "eslint": "^7.13.0",
-    "eslint-loader": "^4.0.2",
-    "gulp-cli": "^2.3.0",
-    "gulp-postcss": "^9.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-uglify": "^3.0.2",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
     "postcss-import": "^13.0.0",
-    "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.7"
-  }
+    "tailwindcss": "^3.0.13"
+  },
+  "dependencies": {}
 }

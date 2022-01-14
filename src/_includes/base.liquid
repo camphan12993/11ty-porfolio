@@ -1,258 +1,338 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8'/>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
-    <link href='apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
-    <link href='favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
-    <link href='favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-    <link href='https://fonts.gstatic.com' rel='preconnect'>
-    <link href='https://fonts.gstatic.com' rel='preconnect'>
-    <link href='https://fonts.googleapis.com/css2?family=Nunito&family=Lato&display=swap' rel='stylesheet'>
-    <link href='https://unpkg.com/swiper/swiper-bundle.css' rel='stylesheet'>
-    <link href='https://unpkg.com/swiper/swiper-bundle.min.css' rel='stylesheet'>
-    <link href='/assets/css/main.css' rel='stylesheet'/>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/assets/css/main.css" rel="stylesheet" />
 
-    <title>{{ title }}
-    </title>
-    <meta name='title' content="{{ title }}">
-    <meta name='description' content="{{ description }}">
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="{{ description }}" />
 
     <!-- Open Graph / Facebook -->
-    <meta content='website' property='og:type'>
-    <meta property='og:url' content="{{ siteUrl }}">
-    <meta property='og:site_name' content="{{ siteName }}">
-    <meta content='en_US' property='og:locale'>
-    <meta property='og:title' content="{{ title }}">
-    <meta property='og:description' content="{{ description }}">
-    <meta property='og:image' content="{{ imgSrc | prepend: siteUrl }}">
-    <meta content='1280' property='og:image:width'>
-    <meta content='640' property='og:image:height'>
-    <meta property='og:image:alt' content="{{ imgAtl }}">
+    <meta content="website" property="og:type" />
+    <meta property="og:url" content="{{ siteUrl }}" />
+    <meta property="og:site_name" content="{{ siteName }}" />
+    <meta content="en_US" property="og:locale" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ imgSrc | prepend: siteUrl }}" />
+    <meta content="1280" property="og:image:width" />
+    <meta content="640" property="og:image:height" />
+    <meta property="og:image:alt" content="{{ imgAtl }}" />
 
     <!-- Twitter -->
-    <meta content='summary_large_image' property='twitter:card'>
-    <meta property='twitter:url' content="{{ siteUrl }}">
-    <meta property='twitter:title' content="{{ title }}">
-    <meta property='twitter:description' content="{{ description }}">
-    <meta property='twitter:image' content="{{ imgSrc | prepend: siteUrl }}">
-    <meta property='twitter:image:alt' content="{{ imgAlt }}">
+    <meta content="summary_large_image" property="twitter:card" />
+    <meta property="twitter:url" content="{{ siteUrl }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta property="twitter:description" content="{{ description }}" />
+    <meta property="twitter:image" content="{{ imgSrc | prepend: siteUrl }}" />
+    <meta property="twitter:image:alt" content="{{ imgAlt }}" />
   </head>
-  <body class='bg-primary'>
-    <div class='loading fixed inset-0 flex items-center justify-center bg-primary overflow-hidden' id='loading' style='z-index: 1000;'>
-      <img alt='logo-animated' class='w-20 sm:w-28' src='/assets/imgs/logo-animated.gif'>
+  <body class="bg-primary">
+    <!-- <div
+      class="loading fixed inset-0 flex items-center justify-center bg-primary overflow-hidden"
+      id="loading"
+      style="z-index: 1000"
+    >
+      <img
+        alt="logo-animated"
+        class="w-20 sm:w-28"
+        src="/assets/imgs/logo-animated.gif"
+      />
+    </div> -->
+    <div
+      class="fixed top-1/2 right-2 transform -translate-y-1/2 rounded-full flex items-center justify-center w-10 h-10 cursor-pointer hover:border-b hover:border-black transition duration-300 z-50"
+      id="toggleBtn"
+      onclick="toggleDarkMode()"
+    >
+      <span
+        class="absolute animate-pulse w-full h-full bg-white bg-opacity-60 rounded-full"
+      ></span>
+      <ion-icon class="text-2xl" name="moon-outline"></ion-icon>
     </div>
-    <div class='fixed top-1/2 right-2 transform -translate-y-1/2 rounded-full flex items-center justify-center w-10 h-10 cursor-pointer hover:opacity-60 transition duration-300 z-50' id='toggleBtn' onclick='toggleDarkMode()'>
-      <span class='absolute animate-pulse w-full h-full bg-white bg-opacity-60 rounded-full'></span>
-      <ion-icon class='text-2xl' name='moon-outline'></ion-icon>
-    </div>
-    <header class='h-screen flex flex-col'>
-      <div class='container px-4 py-6 flex justify-between flex-wrap flex-row-reverse'>
-        <div class='w-full mb-4 flex items-center justify-between md:w-1/2 md:mb-0 md:relative md:justify-end'>
-          <div class='w-1/3 md:hidden'></div>
-          <div class='w-1/3 text-center md:absolute md:left-2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2'>
-            <img alt='' class='w-16 h-auto inline-block' src='/assets/imgs/logo-animated.gif'>
-          </div>
-
-          <div class='flex justify-end w-1/3'>
-            {% for item in socials %}
-              <a class='ml-6 hover:opacity-40 transition duration-200' href={{item.url}}>
-                <ion-icon name={{item.icon}} class='text-xl sm:text-2xl opacity-80'></ion-icon>
-              </a>
-            {% endfor %}
-          </div>
+    <header class="h-screen flex flex-col border-b border-black">
+      <div class="border border-black flex h-24">
+        <div class="border-r border-black h-full flex items-center px-6">
+          <img
+            alt=""
+            class="w-16 h-auto inline-block"
+            src="/assets/imgs/logo-animated.gif"
+          />
+        </div>
+        <nav
+          class="flex flex-1 px-2 py-4 border-r border-black justify-center items-center"
+        >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#work"
+            >Work</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#portfolios"
+            >Portfolios</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex h-full px-6 items-center">
+          {% for item in socials %}
+          <a class="px-4 hover:opacity-40" href="{{ item.url }}">
+            <ion-icon
+              name="{{ item.icon }}"
+              class="text-xl sm:text-2xl opacity-80"
+            ></ion-icon>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="flex-1 container flex flex-col justify-center items-center">
+        <div>
+          <h1
+            class="text-7xl font-bold mb-2 whitespace-nowrap overflow-hidden mx-auto typer-writer"
+          >
+            Hi! I'm
+            <span class="text-ancient">Cam</span>
+          </h1>
         </div>
 
-        <nav class='flex w-full justify-center md:w-1/2 items-center md:justify-start'>
-          <a class='mr-5 hover:opacity-60 transition duration-200' href='#about'>About</a>
-          <a class='mr-5 hover:opacity-60 transition duration-200' href='#work'>Work</a>
-          <a class='mr-5 hover:opacity-60 transition duration-200' href='#portfolios'>Portfolios</a>
-          <a class='hover:opacity-60 transition duration-200' href='#contact'>Contact</a>
-        </nav>
-
+        <p class="font-light text-xl mb-4">Frontend Developer / Designer</p>
+        <div>
+          <button
+            class="border border-black px-4 py-2 bg-ancient text-white hover:bg-white hover:text-black drop-shadow-[-4px_4px_0px_#000000]"
+          >
+            Download My CV
+          </button>
+        </div>
       </div>
-      <div class='flex-1 container flex flex-col justify-center items-center'>
-        <h1 class='text-4xl sm:text-6xl  mb-2'>Hi! I'm Cam</h1>
-        <p class=' font-bold opacity-60'>A Frontend Developer</p>
-      </div>
-      <div class='text-center pb-10'>
-        <a href='#about'>
-          <ion-icon class='text-4xl animate-bounce cursor-pointer hover:opacity-60 transition duration-300' name='chevron-down-outline'></ion-icon>
+      <div class="text-center pb-10">
+        <a href="#about">
+          <ion-icon
+            class="text-4xl animate-bounce cursor-pointer hover:border-b hover:border-black transition duration-300"
+            name="chevron-down-outline"
+          ></ion-icon>
         </a>
       </div>
     </header>
     <main>
-      <section class='relative' id='about'>
-        <div class='container container-md'>
-          <h2 class='sm:left-2'>ABOUT</h2>
-          <h3 class='mb-3'>WHO I AM?</h3>
-          <div class='flex'>
-            <div class='mr-6'>
-              <h6 class='font-bold opacity-60 mb-2'>Full name
-              </h6>
-              <p class='mb-3'>{{fullname}}</p>
+      <!-- about -->
+      <section class="relative" id="about">
+        <div class="container">
+          <h2 class="section-title">ABOUT ME</h2>
+          <p class="italic mb-6">
+            "Technology changes and is upgraded rapidly everyday. I'm a
+            developer who is attracted by that sort of thing on the internet and
+            bring them on my projects.To me, inspiration is the decisive factor
+            of success of work"
+          </p>
+          <h3 class="mb-3">WHO I AM?</h3>
+          <div class="flex">
+            <div class="mr-6">
+              <h6 class="font-bold opacity-60 mb-2">Full name</h6>
+              <p class="mb-3">{{ fullname }}</p>
             </div>
             <div>
-              <h6 class='font-bold opacity-60 mb-2'>Date Of Birth</h6>
-              <p class='mb-3'>{{dateOfBirth}}</p>
+              <h6 class="font-bold opacity-60 mb-2">Date Of Birth</h6>
+              <p class="mb-3">{{ dateOfBirth }}</p>
             </div>
           </div>
-          <p class='mb-6 italic font-extralight'>"
-            {{about}}
-            "</p>
+          <p class="mb-6 italic font-extralight">
+            "
+            {{ about }}
+            "
+          </p>
 
-          <h3 class='mb-3'>MY SKILLS</h3>
-          <div class='flex flex-wrap justify-center mb-6'>
+          <h3 class="mb-3">MY SKILLS</h3>
+          <div class="flex flex-wrap justify-center mb-6">
             {% for item in skills %}
-              <ion-icon class='p-3' name={{item}} style='font-size:56px;'></ion-icon>
+            <ion-icon
+              class="p-3"
+              name="{{ item }}"
+              style="font-size: 56px"
+            ></ion-icon>
             {% endfor %}
           </div>
-          <div class='rounded-lg bg-white bg-opacity-20 p-10'>
-            <h3 class='text-center mb-3'>DOWNLOAD MY CV</h3>
-            <div class='text-center'>
-              <a class='hover:opacity-60 transition duration-200 animate-pulse' download='camphan_cv' href={{cv}}>
-                <ion-icon class='text-3xl' name='cloud-download-outline'></ion-icon>
+          <div class="rounded-lg bg-white bg-opacity-20 p-10">
+            <h3 class="text-center mb-3">DOWNLOAD MY CV</h3>
+            <div class="text-center">
+              <a
+                class="hover:border-b hover:border-black animate-pulse"
+                download="camphan_cv"
+                href="{{ cv }}"
+              >
+                <ion-icon
+                  class="text-3xl"
+                  name="cloud-download-outline"
+                ></ion-icon>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section class='relative' id='work'>
-        <div class='container container-md'>
-          <h2 class='sm:right-2'>WORK</h2>
-          <div class='relative'>
-            <div class='absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2' style='width: 2px; z-index: 0;'></div>
-            <div class='flex mb-4'>
-              <div class=' flex-1 text-right pr-6'>2011 - May 2016</div>
-              <div class=' flex-1 pl-6'>
-                <h3 class='font-bold'>
-                  Da Nang University Of Technology
-                </h3>
-                <p class='opacity-80'>
-                  Infomation Technology Department
-                </p>
+      <section class="relative" id="work">
+        <div class="container container-md">
+          <h2 class="sm:right-2">WORK</h2>
+          <div class="relative">
+            <div
+              class="absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2"
+              style="width: 2px; z-index: 0"
+            ></div>
+            <div class="flex mb-4">
+              <div class="flex-1 text-right pr-6">2011 - May 2016</div>
+              <div class="flex-1 pl-6">
+                <h3 class="font-bold">Da Nang University Of Technology</h3>
+                <p class="opacity-80">Infomation Technology Department</p>
               </div>
             </div>
-            <div class='flex mb-4'>
-              <div class=' flex-1 text-right pr-6'>June 2016 - April 2017</div>
-              <div class=' flex-1 pl-6'>
-                <h3 class='font-bold'>
-                  FPT Software
-                </h3>
-                <p class='opacity-80'>
-                  Java Developer
-                </p>
+            <div class="flex mb-4">
+              <div class="flex-1 text-right pr-6">June 2016 - April 2017</div>
+              <div class="flex-1 pl-6">
+                <h3 class="font-bold">FPT Software</h3>
+                <p class="opacity-80">Java Developer</p>
               </div>
             </div>
-            <div class='flex mb-4'>
-              <div class=' flex-1 text-right pr-6'>April 2017 - April 2020</div>
-              <div class=' flex-1 pl-6'>
-                <h3 class='font-bold'>
-                  Enouvo IT Solution
-                </h3>
-                <p class='opacity-80'>
-                  Senior Frontend Developer
-                </p>
-                <p class='opacity-80'>
-                  Angular Team Leader
-                </p>
-                <p class='opacity-80'>
-                  Project Manager
-                </p>
+            <div class="flex mb-4">
+              <div class="flex-1 text-right pr-6">April 2017 - April 2020</div>
+              <div class="flex-1 pl-6">
+                <h3 class="font-bold">Enouvo IT Solution</h3>
+                <p class="opacity-80">Senior Frontend Developer</p>
+                <p class="opacity-80">Angular Team Leader</p>
+                <p class="opacity-80">Project Manager</p>
               </div>
             </div>
-            <div class='flex'>
-              <div class=' flex-1 text-right pr-6'>April 2020 - present</div>
-              <div class=' flex-1 pl-6'>
-                <h3 class='font-bold'>
-                  Freelancer
-                </h3>
-                <p class='opacity-80'>
-                  Website Developer
-                </p>
-                <p class='opacity-80'>
-                  Graphic Design
-                </p>
+            <div class="flex">
+              <div class="flex-1 text-right pr-6">April 2020 - present</div>
+              <div class="flex-1 pl-6">
+                <h3 class="font-bold">Freelancer</h3>
+                <p class="opacity-80">Website Developer</p>
+                <p class="opacity-80">Graphic Design</p>
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
-      <section class='relative' id='portfolios'>
-        <div class='container'>
-          <h2 class='sm:left-2'>PORTFOLIOS</h2>
-          <div class='swiper-container'>
-            <div class='swiper-wrapper'>
+      <section class="relative" id="portfolios">
+        <div class="container">
+          <h2 class="sm:left-2">PORTFOLIOS</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
               {%- for item in portfolios -%}
-                <div class='swiper-slide'>
-                  <div class='flex flex-col md:flex-row md:justify-center md:items-center'>
-                    <div class='relative hidden md:block md:pb-1/2 w-1/2 px-4 lg:pb-1/3 rounded-2xl overflow-hidden'>
-                      <img alt='dti' class='bg-white bg-opacity-30  absolute transform hover:scale-110 transition duration-500 inset-0 w-full h-full object-cover object-center' src={{item.img}}>
-
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col md:flex-row md:justify-center md:items-center"
+                >
+                  <div
+                    class="relative hidden md:block md:pb-1/2 w-1/2 px-4 lg:pb-1/3 rounded-2xl overflow-hidden"
+                  >
+                    <img
+                      alt="dti"
+                      class="bg-white bg-opacity-30 absolute transform hover:scale-110 transition duration-500 inset-0 w-full h-full object-cover object-center"
+                      src="{{ item.img }}"
+                    />
+                  </div>
+                  <div
+                    class="bg-white bg-opacity-30 rounded-2xl p-6 md:bg-opacity-0 md:rounded-none md:w-1/2"
+                  >
+                    <span class="font-bold opacity-60">{{ item.type }}</span>
+                    <h3 class="font-bold mb-6 text-2xl">{{ item.name }}</h3>
+                    <img
+                      alt="dti"
+                      class="md:hidden w-full h-auto mb-8 rounded-lg"
+                      src="{{ item.img }}"
+                    />
+                    <p class="italic mb-4">
+                      {{ item.des }}
+                    </p>
+                    <div class="flex mb-6">
+                      <div class="w-1/2">
+                        <h6 class="font-bold uppercase opacity-60 mb-1">
+                          Positions
+                        </h6>
+                        {%- for i in item.positions -%}
+                        <p>{{ i }}</p>
+                        {%- endfor -%}
+                      </div>
+                      <div class="w-1/2">
+                        <h6 class="font-bold uppercase opacity-60 mb-1">
+                          Techs
+                        </h6>
+                        <p>{{ item.techs }}</p>
+                      </div>
                     </div>
-                    <div class='bg-white bg-opacity-30 rounded-2xl p-6 md:bg-opacity-0 md:rounded-none md:w-1/2'>
-                      <span class='font-bold opacity-60'>{{item.type}}</span>
-                      <h3 class='font-bold mb-6 text-2xl'>{{item.name}}</h3>
-                      <img alt='dti' class='md:hidden w-full h-auto mb-8 rounded-lg' src={{item.img}}>
-                      <p class='italic mb-4'>
-                        {{item.des}}
-                      </p>
-                      <div class='flex mb-6'>
-                        <div class='w-1/2'>
-                          <h6 class='font-bold uppercase opacity-60 mb-1'>Positions</h6>
-                          {%- for i in item.positions -%}
-                            <p>{{i}}</p>
-                          {%- endfor -%}
-                        </div>
-                        <div class='w-1/2'>
-                          <h6 class='font-bold uppercase opacity-60 mb-1'>Techs</h6>
-                          <p>{{item.techs}}</p>
-                        </div>
-                      </div>
-                      <div class='flex justify-center md:justify-start'>
-                        {% if item.demoUrl and item.demoUrl != '' %}
-                          <a class='w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4' href={{item.demoUrl}}>Demo</a>
-                        {% endif %}
-                        {% if item.sourceUrl and  item.sourceUrl != ''%}
-                          <a class='w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300' href={{item.sourceUrl}}>Source</a>
-                        {% endif %}
-                      </div>
+                    <div class="flex justify-center md:justify-start">
+                      {% if item.demoUrl and item.demoUrl != '' %}
+                      <a
+                        class="w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4"
+                        href="{{ item.demoUrl }}"
+                        >Demo</a
+                      >
+                      {% endif %} {% if item.sourceUrl and item.sourceUrl !=
+                      ''%}
+                      <a
+                        class="w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300"
+                        href="{{ item.sourceUrl }}"
+                        >Source</a
+                      >
+                      {% endif %}
                     </div>
                   </div>
                 </div>
+              </div>
 
               {%- endfor -%}
             </div>
-            <div class='swiper-button-next swiper-button-white'></div>
-            <div class='swiper-button-prev swiper-button-white'></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
           </div>
-
         </div>
       </section>
-      <section class='py-36'>
-        <div class='text-center text-4xl sm:text-6xl  px-10 container'>
+      <section class="py-36">
+        <div class="text-center text-4xl sm:text-6xl px-10 container">
           I occasionally take on freelance opportunities.
         </div>
       </section>
-      <section class='relative' id='contact'>
-        <div class='container container-md'>
-          <h2 class='sm:right-2'>CONTACT</h2>
+      <section class="relative" id="contact">
+        <div class="container container-md">
+          <h2 class="sm:right-2">CONTACT</h2>
           {% for item in contact %}
-            <div class=' mb-2'>
-              <h6 class='font-bold opacity-60'>{{item.name}}</h6>
-              <p>{{item.content}}</p>
-            </div>
+          <div class="mb-2">
+            <h6 class="font-bold opacity-60">{{ item.name }}</h6>
+            <p>{{ item.content }}</p>
+          </div>
           {% endfor %}
         </div>
-
       </section>
     </main>
-    <script src='https://unpkg.com/swiper/swiper-bundle.js'></script>
-    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
-    <script src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js' type='module'></script>
-    <script nomodule='' src='https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js'></script>
-    <script src='/assets/js/main.js'></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

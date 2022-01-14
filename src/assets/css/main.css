@@ -3,10 +3,10 @@
 @tailwind components;
 
 :root {
-  --color-primary: #ffa45b;
+  --color-primary: #fff59a;
   --color-secondary: #39311d;
-  --text-primary: #fff;
-  --color-ancient: #dedede;
+  --text-primary: #0000;
+  --color-ancient: #ff7144;
 }
 
 .theme-dark {
@@ -18,28 +18,23 @@
 
 html,
 body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  @apply text-textPrimary;
-  scroll-behavior: smooth;
-  @apply transition duration-300;
+  font-family: 'Source Code Pro', monospace;
+  @apply border border-black;
 }
 section {
   @apply px-4 py-16;
-}
-
-section h2 {
-  @apply text-white text-4xl text-center mb-10 sm:text-6xl font-bold sm:absolute text-opacity-30 tracking-widest font-title;
 }
 
 section > div {
   @apply sm:px-12;
 }
 
-@screen sm {
-  section h2 {
-    writing-mode: vertical-rl;
-  }
+.section-title {
+  @apply text-5xl relative font-bold inline-block pb-3 mb-12;
+}
+
+.section-title::after {
+  @apply content-[''] absolute bottom-0 left-0 right-0 h-2 bg-ancient drop-shadow-[-4px_4px_0px_#000000];
 }
 
 .container-md {
@@ -49,6 +44,31 @@ section > div {
 /* loading */
 .loading.fade-out {
   animation: fadeOut 1s both ease-in-out;
+}
+
+.typer-writer {
+  animation: typing 1.5s steps(80, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
 }
 
 @keyframes fadeOut {
