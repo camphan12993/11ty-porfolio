@@ -41,6 +41,7 @@ module.exports = {
       },
       colors: {
         primary: 'var(--color-primary)',
+        'primary-dark': 'var(--color-primary-dark)',
         secondary: 'var(--color-secondary)',
         ancient: 'var(--color-ancient)',
         textPrimary: 'var(--text-primary)',

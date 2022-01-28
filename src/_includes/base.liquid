@@ -136,184 +136,164 @@
     </header>
     <main>
       <!-- about -->
-      <section class="relative" id="about">
-        <div class="container">
-          <h2 class="section-title">ABOUT ME</h2>
-          <p class="italic mb-6">
-            "Technology changes and is upgraded rapidly everyday. I'm a
-            developer who is attracted by that sort of thing on the internet and
-            bring them on my projects.To me, inspiration is the decisive factor
-            of success of work"
-          </p>
-          <h3 class="mb-3">WHO I AM?</h3>
-          <div class="flex">
-            <div class="mr-6">
-              <h6 class="font-bold opacity-60 mb-2">Full name</h6>
-              <p class="mb-3">{{ fullname }}</p>
+      <section id="about">
+        <h2 class="section-title">ABOUT ME</h2>
+        <p class="italic mb-6">"{{ about }}"</p>
+        <div class="border border-black mb-8">
+          <h3
+            class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
+          >
+            <ion-icon class="mr-2" name="person-outline"></ion-icon> WHO I AM?
+          </h3>
+          <div class="py-4 px-8">
+            <div class="flex mb-2">
+              <h6 class="font-bold opacity-60 w-60">Full name</h6>
+              <p class="">{{ fullname }}</p>
             </div>
-            <div>
-              <h6 class="font-bold opacity-60 mb-2">Date Of Birth</h6>
-              <p class="mb-3">{{ dateOfBirth }}</p>
+            <div class="flex mb-2">
+              <h6 class="font-bold opacity-60 w-60">Date Of Birth</h6>
+              <p class="">{{ dateOfBirth }}</p>
+            </div>
+            <div class="flex mb-2">
+              <h6 class="font-bold opacity-60 w-60">Gender</h6>
+              <p class="">{{ gender }}</p>
             </div>
           </div>
-          <p class="mb-6 italic font-extralight">
-            "
-            {{ about }}
-            "
-          </p>
+        </div>
 
-          <h3 class="mb-3">MY SKILLS</h3>
-          <div class="flex flex-wrap justify-center mb-6">
-            {% for item in skills %}
-            <ion-icon
-              class="p-3"
-              name="{{ item }}"
-              style="font-size: 56px"
-            ></ion-icon>
-            {% endfor %}
+        <div class="border border-black">
+          <h3
+            class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
+          >
+            <ion-icon name="build-outline" class="mr-2"></ion-icon> SKILLS
+          </h3>
+          <div class="py-4 px-8">
+            <div class="flex flex-wrap justify-center">
+              {% for item in skills %}
+              <ion-icon
+                class="p-3"
+                name="{{ item }}"
+                style="font-size: 56px"
+              ></ion-icon>
+              {% endfor %}
+            </div>
           </div>
-          <div class="rounded-lg bg-white bg-opacity-20 p-10">
-            <h3 class="text-center mb-3">DOWNLOAD MY CV</h3>
-            <div class="text-center">
-              <a
-                class="hover:border-b hover:border-black animate-pulse"
-                download="camphan_cv"
-                href="{{ cv }}"
+        </div>
+      </section>
+      <section id="work">
+        <h2 class="section-title">WORK</h2>
+        <table class="w-full table-auto border border-black">
+          <tbody>
+            {% for item in works %}
+            <tr>
+              <td
+                class="align-top border border-black text-ancient font-bold px-4 py-4"
               >
-                <ion-icon
-                  class="text-3xl"
-                  name="cloud-download-outline"
-                ></ion-icon>
-              </a>
-            </div>
-          </div>
-        </div>
+                {{ item.time }}
+              </td>
+              <td class="border border-black px-4 py-4">
+                <h3 class="font-bold">{{ item.company }}</h3>
+                <p class="opacity-80">{{ item.position }}</p>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </section>
-      <section class="relative" id="work">
-        <div class="container container-md">
-          <h2 class="sm:right-2">WORK</h2>
-          <div class="relative">
-            <div
-              class="absolute h-full bg-white left-1/2 bg-opacity-60 top-0 transform -translate-x-1/2"
-              style="width: 2px; z-index: 0"
-            ></div>
-            <div class="flex mb-4">
-              <div class="flex-1 text-right pr-6">2011 - May 2016</div>
-              <div class="flex-1 pl-6">
-                <h3 class="font-bold">Da Nang University Of Technology</h3>
-                <p class="opacity-80">Infomation Technology Department</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <div class="flex-1 text-right pr-6">June 2016 - April 2017</div>
-              <div class="flex-1 pl-6">
-                <h3 class="font-bold">FPT Software</h3>
-                <p class="opacity-80">Java Developer</p>
-              </div>
-            </div>
-            <div class="flex mb-4">
-              <div class="flex-1 text-right pr-6">April 2017 - April 2020</div>
-              <div class="flex-1 pl-6">
-                <h3 class="font-bold">Enouvo IT Solution</h3>
-                <p class="opacity-80">Senior Frontend Developer</p>
-                <p class="opacity-80">Angular Team Leader</p>
-                <p class="opacity-80">Project Manager</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="flex-1 text-right pr-6">April 2020 - present</div>
-              <div class="flex-1 pl-6">
-                <h3 class="font-bold">Freelancer</h3>
-                <p class="opacity-80">Website Developer</p>
-                <p class="opacity-80">Graphic Design</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="relative" id="portfolios">
-        <div class="container">
-          <h2 class="sm:left-2">PORTFOLIOS</h2>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              {%- for item in portfolios -%}
-              <div class="swiper-slide">
-                <div
-                  class="flex flex-col md:flex-row md:justify-center md:items-center"
-                >
-                  <div
-                    class="relative hidden md:block md:pb-1/2 w-1/2 px-4 lg:pb-1/3 rounded-2xl overflow-hidden"
-                  >
-                    <img
-                      alt="dti"
-                      class="bg-white bg-opacity-30 absolute transform hover:scale-110 transition duration-500 inset-0 w-full h-full object-cover object-center"
-                      src="{{ item.img }}"
-                    />
-                  </div>
-                  <div
-                    class="bg-white bg-opacity-30 rounded-2xl p-6 md:bg-opacity-0 md:rounded-none md:w-1/2"
-                  >
-                    <span class="font-bold opacity-60">{{ item.type }}</span>
-                    <h3 class="font-bold mb-6 text-2xl">{{ item.name }}</h3>
-                    <img
-                      alt="dti"
-                      class="md:hidden w-full h-auto mb-8 rounded-lg"
-                      src="{{ item.img }}"
-                    />
-                    <p class="italic mb-4">
-                      {{ item.des }}
-                    </p>
-                    <div class="flex mb-6">
-                      <div class="w-1/2">
-                        <h6 class="font-bold uppercase opacity-60 mb-1">
-                          Positions
-                        </h6>
-                        {%- for i in item.positions -%}
-                        <p>{{ i }}</p>
-                        {%- endfor -%}
-                      </div>
-                      <div class="w-1/2">
-                        <h6 class="font-bold uppercase opacity-60 mb-1">
-                          Techs
-                        </h6>
-                        <p>{{ item.techs }}</p>
-                      </div>
-                    </div>
-                    <div class="flex justify-center md:justify-start">
-                      {% if item.demoUrl and item.demoUrl != '' %}
-                      <a
-                        class="w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4"
-                        href="{{ item.demoUrl }}"
-                        >Demo</a
-                      >
-                      {% endif %} {% if item.sourceUrl and item.sourceUrl !=
-                      ''%}
-                      <a
-                        class="w-24 py-1 border-white rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300"
-                        href="{{ item.sourceUrl }}"
-                        >Source</a
-                      >
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section id="portfolios">
+        <h2 class="section-title">PORTFOLIOS</h2>
 
-              {%- endfor -%}
-            </div>
-            <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
+        <div
+          class="flex items-center border-b border-black mb-8"
+          id="project-nav"
+        >
+          {% for item in portfolios %} {% if item.projects.length > 0 %}
+          <div
+            class="px-10 py-2 text-opacity-60 font-bold text-black cursor-pointer hover:opacity-80 {% if forloop.index == 1 %} active {% endif %}"
+            onclick="setActiveTab({{ forloop.index }})"
+          >
+            {{ item.type }}
           </div>
+          {% endif %} {% endfor %}
         </div>
+        {% for p in portfolios %}
+        <div
+          class="project-nav-content {% if forloop.index != 1 %} hidden {% endif %}"
+        >
+          {% for item in p.projects %}
+          <div class="flex items-start mb-8">
+            <div
+              class="relative hidden md:block border border-black md:pb-1/2 w-1/2 lg:pb-1/3 bg-primary-dark overflow-hidden"
+            >
+              <img
+                alt="dti"
+                class="p-6 absolute inset-0 w-full h-full object-cover object-center"
+                src="{{ item.img }}"
+              />
+            </div>
+            <div class="md:ml-6 md:w-1/2">
+              <h3 class="font-bold mb-6 bg-primary-dark rounded-sm px-4 py-2">
+                {{ item.name }}
+              </h3>
+              <img
+                alt="dti"
+                class="md:hidden w-full h-auto mb-8 rounded-lg"
+                src="{{ item.img }}"
+              />
+              <p class="italic mb-4">
+                {{ item.des }}
+              </p>
+              <div class="flex mb-4">
+                <h6 class="font-bold uppercase opacity-60 mr-4">Positions</h6>
+                {%- for i in item.positions -%}
+                <p>{{ i }}</p>
+                {%- endfor -%}
+              </div>
+              <div class="flex mb-4">
+                <h6 class="font-bold uppercase opacity-60 mr-4">Techs</h6>
+                <p>{{ item.techs }}</p>
+              </div>
+              <div class="mb-4">
+                <h6 class="font-bold uppercase opacity-60 mb-2">What I did</h6>
+                <p>{{ item.techs }}</p>
+              </div>
+              <div class="flex justify-center md:justify-start">
+                {% if item.demoUrl and item.demoUrl != '' %}
+                <a
+                  class="w-24 py-1 border-black rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4"
+                  href="{{ item.demoUrl }}"
+                  >Demo</a
+                >
+                {% endif %} {% if item.sourceUrl and item.sourceUrl != ''%}
+                <a
+                  class="w-24 py-1 border-black rounded-md border text-center hover:bg-white hover:bg-opacity-60 transition duration-300"
+                  href="{{ item.sourceUrl }}"
+                  >Source</a
+                >
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
       </section>
       <section class="py-36">
-        <div class="text-center text-4xl sm:text-6xl px-10 container">
-          I occasionally take on freelance opportunities.
+        <div class="flex justify-center items-center">
+          <ion-icon
+            class="text-8xl text-ancient"
+            name="rocket-outline"
+          ></ion-icon>
+          <p class="text-4xl ml-4 uppercase drop-shadow-[-2px_2px_0px_#FF7144]">
+            I occasionally take on freelance opportunities.
+          </p>
         </div>
       </section>
       <section class="relative" id="contact">
-        <div class="container container-md">
-          <h2 class="sm:right-2">CONTACT</h2>
+        <h2 class="section-title">CONTACT</h2>
+        <div
+          class="bg-primary-dark border-black border drop-shadow-[-6px_6px_0px_#FF7144] p-6"
+        >
           {% for item in contact %}
           <div class="mb-2">
             <h6 class="font-bold opacity-60">{{ item.name }}</h6>
@@ -323,8 +303,6 @@
         </div>
       </section>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
       type="module"

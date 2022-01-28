@@ -4,6 +4,7 @@
 
 :root {
   --color-primary: #fff59a;
+  --color-primary-dark: #ffef5c;
   --color-secondary: #39311d;
   --text-primary: #0000;
   --color-ancient: #ff7144;
@@ -22,11 +23,7 @@ body {
   @apply border border-black;
 }
 section {
-  @apply px-4 py-16;
-}
-
-section > div {
-  @apply sm:px-12;
+  @apply px-4 py-16 border-black border-b;
 }
 
 .section-title {
@@ -79,6 +76,10 @@ section > div {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+#project-nav .active {
+  @apply border-b-4 border-ancient text-opacity-100;
 }
 
 @tailwind utilities;
