@@ -7,7 +7,7 @@
     "eleventy:watch": "eleventy --watch",
     "gulp:watch": "gulp watch",
     "start": "npm-run-all --parallel *:watch",
-    "build": "npx gulp build && eleventy"
+    "build": "gulp build && eleventy"
   },
   "repository": {
     "type": "git",
