@@ -3,83 +3,80 @@
 @tailwind components;
 
 :root {
-  --color-primary: #fff59a;
-  --color-primary-dark: #ffef5c;
-  --color-secondary: #39311d;
-  --text-primary: #0000;
-  --color-ancient: #ff7144;
+	--color-primary: #fff59a;
+	--color-primary-dark: #ffef5c;
+	--color-secondary: #39311d;
+	--text-primary: #0000;
+	--color-ancient: #ff7144;
 }
 
 .theme-dark {
-  --color-primary: #2a2f35;
-  --color-secondary: black;
-  --text-primary: #fff;
-  --color-ancient: #dedede;
+	--color-primary: #2a2f35;
+	--color-secondary: black;
+	--text-primary: #fff;
+	--color-ancient: #dedede;
 }
 
 html,
 body {
-  font-family: 'Source Code Pro', monospace;
-  @apply border border-black;
+	font-family: "Source Code Pro", monospace;
+	font-size: 14px;
+	@apply border border-black;
 }
 section {
-  @apply px-4 py-16 border-black border-b;
+	@apply px-4 py-16 border-black border-b;
 }
 
 .section-title {
-  @apply text-5xl relative font-bold inline-block pb-3 mb-12;
+	@apply text-5xl relative font-bold inline-block pb-3 mb-12;
 }
 
 .section-title::after {
-  @apply content-[''] absolute bottom-0 left-0 right-0 h-2 bg-ancient drop-shadow-[-4px_4px_0px_#000000];
-}
-
-.container-md {
-  max-width: 768px;
+	@apply content-[''] absolute bottom-0 left-0 right-0 h-2 bg-ancient drop-shadow-[-4px_4px_0px_#000000];
 }
 
 /* loading */
 .loading.fade-out {
-  animation: fadeOut 1s both ease-in-out;
+	animation: fadeOut 1s both ease-in-out;
 }
 
 .typer-writer {
-  animation: typing 1.5s steps(80, end), blink-caret 0.75s step-end infinite;
+	animation: typing 1.5s steps(80, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: red;
-  }
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: red;
+	}
 }
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 #project-nav .active {
-  @apply border-b-4 border-ancient text-opacity-100;
+	@apply border-b-4 border-ancient text-opacity-100;
 }
 
 @tailwind utilities;
