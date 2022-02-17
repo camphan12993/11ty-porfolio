@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-		<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-		<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-		<link href="https://fonts.gstatic.com" rel="preconnect" />
-		<link href="https://fonts.gstatic.com" rel="preconnect" />
-		<link href="https://fonts.googleapis.com" rel="preconnect" />
-		<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="/assets/css/main.css" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/assets/css/main.css" rel="stylesheet" />
 
-		<title>{{ title }}</title>
-		<meta name="title" content="{{ title }}" />
-		<meta name="description" content="{{ description }}" />
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="{{ description }}" />
 
-		<!-- Open Graph / Facebook -->
-		<meta content="website" property="og:type" />
-		<meta property="og:url" content="{{ siteUrl }}" />
-		<meta property="og:site_name" content="{{ siteName }}" />
-		<meta content="en_US" property="og:locale" />
-		<meta property="og:title" content="{{ title }}" />
-		<meta property="og:description" content="{{ description }}" />
-		<meta property="og:image" content="{{ imgSrc | prepend: siteUrl }}" />
-		<meta content="1280" property="og:image:width" />
-		<meta content="640" property="og:image:height" />
-		<meta property="og:image:alt" content="{{ imgAtl }}" />
+    <!-- Open Graph / Facebook -->
+    <meta content="website" property="og:type" />
+    <meta property="og:url" content="{{ siteUrl }}" />
+    <meta property="og:site_name" content="{{ siteName }}" />
+    <meta content="en_US" property="og:locale" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ imgSrc | prepend: siteUrl }}" />
+    <meta content="1280" property="og:image:width" />
+    <meta content="640" property="og:image:height" />
+    <meta property="og:image:alt" content="{{ imgAtl }}" />
 
-		<!-- Twitter -->
-		<meta content="summary_large_image" property="twitter:card" />
-		<meta property="twitter:url" content="{{ siteUrl }}" />
-		<meta property="twitter:title" content="{{ title }}" />
-		<meta property="twitter:description" content="{{ description }}" />
-		<meta property="twitter:image" content="{{ imgSrc | prepend: siteUrl }}" />
-		<meta property="twitter:image:alt" content="{{ imgAlt }}" />
-	</head>
-	<body class="bg-primary">
-		<!-- <div
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card" />
+    <meta property="twitter:url" content="{{ siteUrl }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta property="twitter:description" content="{{ description }}" />
+    <meta property="twitter:image" content="{{ imgSrc | prepend: siteUrl }}" />
+    <meta property="twitter:image:alt" content="{{ imgAlt }}" />
+  </head>
+  <body class="bg-primary">
+    <!-- <div
       class="loading fixed inset-0 flex items-center justify-center bg-primary overflow-hidden"
       id="loading"
       style="z-index: 1000"
@@ -52,275 +52,296 @@
         src="/assets/imgs/logo-animated.gif"
       />
     </div> -->
-		<div
-			class="fixed top-1/2 right-2 transform -translate-y-1/2 rounded-full flex items-center justify-center w-10 h-10 cursor-pointer hover:border-b hover:border-black transition duration-300 z-50"
-			id="toggleBtn"
-			onclick="toggleDarkMode()"
-		>
-			<span
-				class="absolute animate-pulse w-full h-full bg-white bg-opacity-60 rounded-full"
-			></span>
-			<ion-icon class="text-2xl" name="moon-outline"></ion-icon>
-		</div>
-		<header class="h-screen flex flex-col border-b border-black">
-			<div class="border border-black flex h-24">
-				<div class="border-r border-black h-full flex items-center px-6">
-					<img
-						alt=""
-						class="w-16 h-auto inline-block"
-						src="/assets/imgs/logo-animated.gif"
-					/>
-				</div>
-				<nav
-					class="flex flex-1 px-2 py-4 border-r border-black justify-center items-center"
-				>
-					<a
-						class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
-						href="#about"
-						>About</a
-					>
-					<a
-						class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
-						href="#work"
-						>Work</a
-					>
-					<a
-						class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
-						href="#portfolios"
-						>Portfolios</a
-					>
-					<a
-						class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
-						href="#contact"
-						>Contact</a
-					>
-				</nav>
-				<div class="flex h-full px-6 items-center">
-					{% for item in socials %}
-					<a class="px-4 hover:opacity-40" href="{{ item.url }}">
-						<ion-icon
-							name="{{ item.icon }}"
-							class="text-xl sm:text-2xl opacity-80"
-						></ion-icon>
-					</a>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="flex-1 container flex flex-col justify-center items-center">
-				<div>
-					<h1
-						class="text-7xl font-bold mb-2 whitespace-nowrap overflow-hidden mx-auto typer-writer"
-					>
-						Hi! I'm
-						<span class="text-ancient">Cam</span>
-					</h1>
-				</div>
 
-				<p class="font-light text-xl mb-4">Frontend Developer / Designer</p>
-				<div>
-					<button
-						class="border border-black px-4 py-2 bg-ancient text-white hover:bg-white hover:text-black drop-shadow-[-4px_4px_0px_#000000]"
-					>
-						Download My CV
-					</button>
-				</div>
-			</div>
-			<div class="text-center pb-10">
-				<a href="#about">
-					<ion-icon
-						class="text-4xl animate-bounce cursor-pointer hover:border-b hover:border-black transition duration-300"
-						name="chevron-down-outline"
-					></ion-icon>
-				</a>
-			</div>
-		</header>
-		<main>
-			<!-- about -->
-			<section id="about">
-				<div class="container mx-auto">
-					<h2 class="section-title">ABOUT ME</h2>
-					<p class="italic mb-6">"{{ about }}"</p>
-					<div class="border border-black mb-8">
-						<h3
-							class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
-						>
-							<ion-icon class="mr-2" name="person-outline"></ion-icon> WHO I AM?
-						</h3>
-						<div class="py-4 px-8">
-							<div class="flex mb-2">
-								<h6 class="font-bold opacity-60 w-60">Full name</h6>
-								<p class="">{{ fullname }}</p>
-							</div>
-							<div class="flex mb-2">
-								<h6 class="font-bold opacity-60 w-60">Date Of Birth</h6>
-								<p class="">{{ dateOfBirth }}</p>
-							</div>
-							<div class="flex mb-2">
-								<h6 class="font-bold opacity-60 w-60">Gender</h6>
-								<p class="">{{ gender }}</p>
-							</div>
-						</div>
-					</div>
+    <header class="h-screen flex flex-col border-b border-black">
+      <div class="border-b border-black flex h-24">
+        <div class="justify-center border-black h-full flex items-center px-6">
+          <img
+            alt=""
+            class="w-16 h-auto inline-block"
+            src="/assets/imgs/logo-animated.gif"
+          />
+        </div>
+        <div
+          class="border-l flex-1 border-black h-full flex items-center w-28 flex-shrink-0 md:hidden"
+        ></div>
+        <nav
+          class="hidden md:flex flex-1 px-2 py-4 border-l border-black justify-center items-center"
+        >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#work"
+            >Work</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#portfolios"
+            >Portfolios</a
+          >
+          <a
+            class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
 
-					<div class="border border-black">
-						<h3
-							class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
-						>
-							<ion-icon name="build-outline" class="mr-2"></ion-icon> SKILLS
-						</h3>
-						<div class="py-4 px-8">
-							<div class="flex flex-wrap justify-center">
-								{% for item in skills %}
-								<ion-icon
-									class="p-3"
-									name="{{ item }}"
-									style="font-size: 56px"
-								></ion-icon>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="work">
-				<div class="container mx-auto">
-					<h2 class="section-title">WORK</h2>
-					<table class="w-full table-auto border border-black">
-						<tbody>
-							{% for item in works %}
-							<tr>
-								<td
-									class="align-top border border-black text-ancient font-bold px-4 py-4"
-								>
-									{{ item.time }}
-								</td>
-								<td class="border border-black px-4 py-4">
-									<h3 class="font-bold">{{ item.company }}</h3>
-									<p class="opacity-80">{{ item.position }}</p>
-								</td>
-							</tr>
-							{% endfor %}
-						</tbody>
-					</table>
-				</div>
-			</section>
-			<section id="portfolios">
-				<div class="container mx-auto">
-					<h2 class="section-title">PORTFOLIOS</h2>
+        <div class="flex h-full px-6 items-center border-l border-black">
+          {% for item in socials %}
+          <a class="px-4 hover:opacity-40" href="{{ item.url }}">
+            <ion-icon
+              name="{{ item.icon }}"
+              class="text-2xl opacity-80"
+            ></ion-icon>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <nav
+        class="md:hidden flex px-2 py-4 border-b h-24 border-black justify-center items-center"
+      >
+        <a
+          class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+          href="#about"
+          >About</a
+        >
+        <a
+          class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+          href="#work"
+          >Work</a
+        >
+        <a
+          class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+          href="#portfolios"
+          >Portfolios</a
+        >
+        <a
+          class="px-2 mx-2 py-2 hover:border-b-4 hover:border-ancient"
+          href="#contact"
+          >Contact</a
+        >
+      </nav>
+      <div class="flex-1 container flex flex-col justify-center items-center">
+        <div>
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-4 whitespace-nowrap overflow-hidden mx-auto typer-writer"
+          >
+            Hi! I'm
+            <span class="text-ancient">Cam</span>
+          </h1>
+        </div>
 
-					<div
-						class="flex items-center border-b border-black mb-8"
-						id="project-nav"
-					>
-						{% for item in portfolios %} {% if item.projects.length > 0 %}
-						<div
-							class="px-10 py-2 text-opacity-60 font-bold text-black cursor-pointer hover:opacity-80 {% if forloop.index == 1 %} active {% endif %}"
-							onclick="setActiveTab({{ forloop.index }})"
-						>
-							{{ item.type }}
-						</div>
-						{% endif %} {% endfor %}
-					</div>
-					{% for p in portfolios %}
-					<div
-						class="project-nav-content {% if forloop.index != 1 %} hidden {% endif %}"
-					>
-						{% for item in p.projects %}
-						<div
-							class="md:flex items-start mb-10 gap-4 border-b border-b-black pb-10 last:pb-0 last:border-b-0 last:mb-0"
-						>
-							<div
-								class="mb-4 md:mb-0 flex-1 relative border border-black bg-primary-dark overflow-hidden"
-							>
-								<img
-									alt="dti"
-									class="p-6 w-full h-auto object-cover object-center"
-									src="{{ item.img }}"
-								/>
-							</div>
-							<div class="md:ml-6 md:w-1/2 flex-1">
-								<h3 class="font-bold mb-6 bg-primary-dark rounded-sm px-4 py-2">
-									{{ item.name }}
-								</h3>
-								<p class="italic mb-4">
-									{{ item.des }}
-								</p>
-								<div class="flex mb-4">
-									<h6 class="font-bold uppercase opacity-60 mr-4">Positions</h6>
-									{%- for i in item.positions -%}
-									<p>{{ i }}</p>
-									{%- endfor -%}
-								</div>
-								<div class="flex mb-4">
-									<h6 class="font-bold uppercase opacity-60 mr-4">Techs</h6>
-									<p>{{ item.techs }}</p>
-								</div>
-								<div class="mb-4">
-									<h6 class="font-bold uppercase opacity-60 mb-2">
-										What I did
-									</h6>
-								</div>
-								<div class="flex">
-									{% if item.demoUrl and item.demoUrl != '' %}
-									<a
-										class="w-24 border-black border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4"
-										href="{{ item.demoUrl }}"
-										>Demo</a
-									>
-									{% endif %} {% if item.sourceUrl and item.sourceUrl != ''%}
-									<a
-										class="w-24 border-black border text-center hover:bg-white hover:bg-opacity-60 transition duration-300"
-										href="{{ item.sourceUrl }}"
-										>Source</a
-									>
-									{% endif %}
-								</div>
-							</div>
-						</div>
-						{% endfor %}
-					</div>
-					{% endfor %}
-				</div>
-			</section>
-			<section class="py-36">
-				<div class="container mx-auto">
-					<div class="flex justify-center items-center">
-						<ion-icon
-							class="text-8xl text-ancient"
-							name="rocket-outline"
-						></ion-icon>
-						<p
-							class="text-4xl ml-4 uppercase drop-shadow-[-2px_2px_0px_#FF7144]"
-						>
-							I occasionally take on freelance opportunities.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section class="relative" id="contact">
-				<div class="container mx-auto">
-					<h2 class="section-title">CONTACT</h2>
-					<div
-						class="bg-primary-dark border-black border drop-shadow-[-6px_6px_0px_#FF7144] p-6"
-					>
-						{% for item in contact %}
-						<div class="mb-2">
-							<h6 class="font-bold opacity-60">{{ item.name }}</h6>
-							<p>{{ item.content }}</p>
-						</div>
-						{% endfor %}
-					</div>
-				</div>
-			</section>
-		</main>
-		<script
-			src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
-			type="module"
-		></script>
-		<script
-			nomodule=""
-			src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
-		></script>
-		<script src="/assets/js/main.js"></script>
-	</body>
+        <p class="font-light text-base md:text-2xl mb-4">
+          Frontend Developer / Designer
+        </p>
+        <div>
+          <button
+            class="border border-black px-4 py-2 bg-ancient text-white hover:bg-white hover:text-black drop-shadow-[-4px_4px_0px_#000000]"
+          >
+            Download My CV
+          </button>
+        </div>
+      </div>
+      <div class="text-center pb-10">
+        <a href="#about">
+          <ion-icon
+            class="text-4xl animate-bounce cursor-pointer hover:border-b hover:border-black transition duration-300"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </a>
+      </div>
+    </header>
+    <main>
+      <!-- about -->
+      <section id="about">
+        <div class="container mx-auto">
+          <h2 class="section-title">ABOUT ME</h2>
+          <p class="italic mb-6">"{{ about }}"</p>
+          <div class="border border-black mb-8">
+            <h3
+              class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
+            >
+              <ion-icon class="mr-2" name="person-outline"></ion-icon> WHO I AM?
+            </h3>
+            <div class="py-4 px-8">
+              <div class="flex mb-2">
+                <h6 class="font-bold opacity-60 w-60">Full name</h6>
+                <p class="">{{ fullname }}</p>
+              </div>
+              <div class="flex mb-2">
+                <h6 class="font-bold opacity-60 w-60">Date Of Birth</h6>
+                <p class="">{{ dateOfBirth }}</p>
+              </div>
+              <div class="flex mb-2">
+                <h6 class="font-bold opacity-60 w-60">Gender</h6>
+                <p class="">{{ gender }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-black">
+            <h3
+              class="py-4 px-8 border-b border-black bg-primary-dark flex items-center font-bold"
+            >
+              <ion-icon name="build-outline" class="mr-2"></ion-icon> SKILLS
+            </h3>
+            <div class="py-4 px-8">
+              <div class="flex flex-wrap justify-center">
+                {% for item in skills %}
+                <ion-icon
+                  class="p-3"
+                  name="{{ item }}"
+                  style="font-size: 56px"
+                ></ion-icon>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work">
+        <div class="container mx-auto">
+          <h2 class="section-title">WORK</h2>
+          <table class="w-full table-auto border border-black">
+            <tbody>
+              {% for item in works %}
+              <tr>
+                <td
+                  class="align-top border border-black text-ancient font-bold px-4 py-4"
+                >
+                  {{ item.time }}
+                </td>
+                <td class="border border-black px-4 py-4">
+                  <h3 class="font-bold">{{ item.company }}</h3>
+                  <p class="opacity-80">{{ item.position }}</p>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="portfolios">
+        <div class="container mx-auto">
+          <h2 class="section-title">PORTFOLIOS</h2>
+
+          <div
+            class="flex items-center border-b border-black mb-8"
+            id="project-nav"
+          >
+            {% for item in portfolios %} {% if item.projects.length > 0 %}
+            <div
+              class="px-10 py-2 text-opacity-60 font-bold text-black cursor-pointer hover:opacity-80 {% if forloop.index == 1 %} active {% endif %}"
+              onclick="setActiveTab({{ forloop.index }})"
+            >
+              {{ item.type }}
+            </div>
+            {% endif %} {% endfor %}
+          </div>
+          {% for p in portfolios %}
+          <div
+            class="project-nav-content {% if forloop.index != 1 %} hidden {% endif %}"
+          >
+            {% for item in p.projects %}
+            <div
+              class="md:flex items-start mb-10 gap-4 border-b border-b-black pb-10 last:pb-0 last:border-b-0 last:mb-0"
+            >
+              <div
+                class="mb-4 md:mb-0 flex-1 relative border border-black bg-primary-dark overflow-hidden"
+              >
+                <img
+                  alt="dti"
+                  class="p-6 w-full h-auto object-cover object-center"
+                  src="{{ item.img }}"
+                />
+              </div>
+              <div class="md:ml-6 md:w-1/2 flex-1">
+                <h3 class="font-bold mb-6 bg-primary-dark rounded-sm px-4 py-2">
+                  {{ item.name }}
+                </h3>
+                <p class="italic mb-4">
+                  {{ item.des }}
+                </p>
+                <div class="flex mb-4">
+                  <h6 class="font-bold uppercase opacity-60 mr-4">Positions</h6>
+                  {%- for i in item.positions -%}
+                  <p>{{ i }}</p>
+                  {%- endfor -%}
+                </div>
+                <div class="flex mb-4">
+                  <h6 class="font-bold uppercase opacity-60 mr-4">Techs</h6>
+                  <p>{{ item.techs }}</p>
+                </div>
+                <div class="mb-4">
+                  <h6 class="font-bold uppercase opacity-60 mb-2">
+                    What I did
+                  </h6>
+                </div>
+                <div class="flex">
+                  {% if item.demoUrl and item.demoUrl != '' %}
+                  <a
+                    class="w-24 border-black border text-center hover:bg-white hover:bg-opacity-60 transition duration-300 mr-4"
+                    href="{{ item.demoUrl }}"
+                    >Demo</a
+                  >
+                  {% endif %} {% if item.sourceUrl and item.sourceUrl != ''%}
+                  <a
+                    class="w-24 border-black border text-center hover:bg-white hover:bg-opacity-60 transition duration-300"
+                    href="{{ item.sourceUrl }}"
+                    >Source</a
+                  >
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <section class="py-36">
+        <div class="container mx-auto">
+          <div class="flex justify-center items-center">
+            <ion-icon
+              class="text-8xl text-ancient"
+              name="rocket-outline"
+            ></ion-icon>
+            <p
+              class="text-4xl text-center ml-4 uppercase drop-shadow-[-2px_2px_0px_#FF7144]"
+            >
+              I occasionally take on freelance opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="relative" id="contact">
+        <div class="container mx-auto">
+          <h2 class="section-title">CONTACT</h2>
+          <div
+            class="bg-primary-dark border-black border drop-shadow-[-6px_6px_0px_#FF7144] p-6"
+          >
+            {% for item in contact %}
+            <div class="mb-2">
+              <h6 class="font-bold opacity-60">{{ item.name }}</h6>
+              <p>{{ item.content }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>
