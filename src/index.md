@@ -1,7 +1,7 @@
 ---
 title: Cam Phan
 description: Hello! I'm Cam and I'm a Developer
-siteUrl: https://camphan.work
+siteUrl: https://camphan.me
 siteName: Cam Phan
 imgSrc: '/assets/imgs/thumnail.jpg'
 imgAtl: Cam Phan
