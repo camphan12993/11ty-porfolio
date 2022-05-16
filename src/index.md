@@ -17,11 +17,9 @@ skills:
 - name: Design
   tech: Figma, Adobe Illustrator
   des: ''
-- name: Design
-  tech: Figma, Pts
-  des: Technology changes and is upgraded rapidly everyday. I'm a developer who is
-    attracted by that sort of thing on the internet and bring them on my  projects.To
-    me, inspiration is the decisive factor of success of work
+- name: Technical skills
+  tech: Angular, Vue, Flutter
+  des: ''
 works:
 - time: 2011 - May 2016
   company: Da Nang University Of Technology
