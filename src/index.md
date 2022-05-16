@@ -6,8 +6,7 @@ siteName: Cam Phan
 imgSrc: '/assets/imgs/thumnail.jpg'
 imgAtl: Cam Phan
 layout: base.liquid
-about:
-  Technology changes and is upgraded rapidly everyday. I'm a developer who is
+about: Technology changes and is upgraded rapidly everyday. I'm a developer who is
   attracted by that sort of thing on the internet and bring them on my  projects.To
   me, inspiration is the decisive factor of success of work
 cv: '/assets/imgs/camphan.pdf'
@@ -15,12 +14,16 @@ fullname: Phan Huynh Cam
 dateOfBirth: 12/09/1993
 gender: Male
 skills:
-  - logo-angular
-  - logo-react
-  - logo-javascript
-  - logo-html5
-  - logo-css3
-  - logo-nodejs
+  - name: Design
+    tech: Figma, Pts
+    des: Technology changes and is upgraded rapidly everyday. I'm a developer who is
+      attracted by that sort of thing on the internet and bring them on my  projects.To
+      me, inspiration is the decisive factor of success of work
+  - name: Design
+    tech: Figma, Pts
+    des: Technology changes and is upgraded rapidly everyday. I'm a developer who is
+      attracted by that sort of thing on the internet and bring them on my  projects.To
+      me, inspiration is the decisive factor of success of work
 works:
   - time: 2011 - May 2016
     company: Da Nang University Of Technology
@@ -67,8 +70,7 @@ portfolios:
         demoUrl: https://www.nmimiclothing.com/
       - name: Rooster World Landing Page
         type: Web
-        des:
-          A Landing Page for Rooster World Vietnam, a company which specializes in Design,
+        des: A Landing Page for Rooster World Vietnam, a company which specializes in Design,
           Website and 3D
         positions:
           - Developer
@@ -88,8 +90,7 @@ portfolios:
         demoUrl: ''
       - name: My Accountant
         type: Web
-        des:
-          An all-in-one accounting and tax app which offer a more efficient and enjoyable
+        des: An all-in-one accounting and tax app which offer a more efficient and enjoyable
           way for a business to manage its accounts
         positions:
           - Admin Web Developer
@@ -100,8 +101,7 @@ portfolios:
         demoUrl: https://myaccountantapp.com.au/
       - name: DTI System
         type: Web
-        des:
-          DTI develops and provides world-leading surveillance, video analytics, and
+        des: DTI develops and provides world-leading surveillance, video analytics, and
           passenger information systems technology and services to the mobile transit industry
           worldwide.
         positions:
