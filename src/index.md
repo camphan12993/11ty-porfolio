@@ -19,7 +19,9 @@ skills:
   des: ''
 - name: Design
   tech: Figma, Adobe Illustrator
-  des: ''
+  des: At first, I started to study Design in order to support my development, then
+    I found down its attraction which help me decide to pursue it until present. I
+    don't expert in design but I'm trying to understand it in my power
 - name: Others
   tech: Soft skill, English
   des: ''
