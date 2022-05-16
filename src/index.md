@@ -48,6 +48,9 @@ contact:
 - name: Address
   content: Da Nang, Vietnam
 socials:
+- name: Linkedin
+  url: https://www.linkedin.com/in/cam-phan-375409182/
+  icon: logo-linkedin
 - name: facebook
   url: https://www.facebook.com/phcnolimit
   icon: logo-facebook
