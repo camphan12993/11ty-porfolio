@@ -14,14 +14,14 @@ fullname: Phan Huynh Cam
 dateOfBirth: 12/09/1993
 gender: Male
 skills:
-- name: Others
-  tech: Soft skill, English
+- name: Technical skills
+  tech: Angular, Vue, Flutter
   des: ''
 - name: Design
   tech: Figma, Adobe Illustrator
   des: ''
-- name: Technical skills
-  tech: Angular, Vue, Flutter
+- name: Others
+  tech: Soft skill, English
   des: ''
 works:
 - time: 2011 - May 2016
