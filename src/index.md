@@ -14,6 +14,9 @@ fullname: Phan Huynh Cam
 dateOfBirth: 12/09/1993
 gender: Male
 skills:
+- name: Others
+  tech: Soft skill, English
+  des: ''
 - name: Design
   tech: Figma, Adobe Illustrator
   des: ''
